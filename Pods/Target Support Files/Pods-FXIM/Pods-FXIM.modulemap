@@ -1,0 +1,6 @@
+framework module Pods_FXIM {
+  umbrella header "Pods-FXIM-umbrella.h"
+
+  export *
+  module * { export * }
+}

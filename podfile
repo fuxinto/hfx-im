@@ -1,0 +1,22 @@
+platform :ios, '15.0'
+
+source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+use_frameworks!
+target 'FXIM' do
+  #加密解密
+  pod 'CryptoSwift'
+  pod 'SwiftyRSA'
+  #网络请求
+  pod 'Moya'
+  #图片
+  pod 'Kingfisher'
+  #钥匙串
+  pod 'KeychainAccess'
+  #堆栈抓取
+  pod 'PLCrashReporter'
+  #解压缩
+  pod 'SWCompression'
+  pod 'SwiftProtobuf'
+  #socket
+  pod 'CocoaAsyncSocket'
+end

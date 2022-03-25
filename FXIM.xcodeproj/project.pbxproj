@@ -1,0 +1,1058 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D0E9CC227E8666000DCC0FF /* HUICommonCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CC127E8666000DCC0FF /* HUICommonCellData.swift */; };
+		5D0E9CC427E8698500DCC0FF /* HIMSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CC327E8698500DCC0FF /* HIMSDK.swift */; };
+		5D0E9CC627E86CCB00DCC0FF /* HIMClientSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CC527E86CCB00DCC0FF /* HIMClientSocket.swift */; };
+		5D0E9CC927E86EAA00DCC0FF /* HIMConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CC827E86EAA00DCC0FF /* HIMConfig.swift */; };
+		5D0E9CCE27E8743E00DCC0FF /* HIMMessageListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CCD27E8743E00DCC0FF /* HIMMessageListener.swift */; };
+		5D0E9CD427E87D0B00DCC0FF /* HIMLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CD327E87D0A00DCC0FF /* HIMLoginManager.swift */; };
+		5D0E9CD627E87D1100DCC0FF /* FXIMBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CD527E87D1100DCC0FF /* FXIMBaseManager.swift */; };
+		5D0E9CD827E87D1B00DCC0FF /* HIMMessageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CD727E87D1B00DCC0FF /* HIMMessageProtocol.swift */; };
+		5D0E9CDC27E87D4300DCC0FF /* FXIMMessageAckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CD927E87D4300DCC0FF /* FXIMMessageAckManager.swift */; };
+		5D0E9CDD27E87D4300DCC0FF /* FXIMConversationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CDA27E87D4300DCC0FF /* FXIMConversationManager.swift */; };
+		5D0E9CDE27E87D4300DCC0FF /* FXIMMessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CDB27E87D4300DCC0FF /* FXIMMessageManager.swift */; };
+		5D0E9CE727E8838900DCC0FF /* him.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CE527E8838900DCC0FF /* him.pb.swift */; };
+		5D0E9CE827E8838900DCC0FF /* msg.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CE627E8838900DCC0FF /* msg.pb.swift */; };
+		5D0E9CEB27E9791D00DCC0FF /* FXUIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CEA27E9791D00DCC0FF /* FXUIConfig.swift */; };
+		5D0E9CED27E991AE00DCC0FF /* FXUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CEC27E991AE00DCC0FF /* FXUserManager.swift */; };
+		5D0E9CEF27E9949A00DCC0FF /* FXIMAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CEE27E9949A00DCC0FF /* FXIMAppManager.swift */; };
+		5D0E9CF127E99ACC00DCC0FF /* FXTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CF027E99ACC00DCC0FF /* FXTabView.swift */; };
+		5D0E9CF327E99B1400DCC0FF /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CF227E99B1400DCC0FF /* TabBarItem.swift */; };
+		5D0E9CF527E99C9400DCC0FF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CF427E99C9400DCC0FF /* Colors.swift */; };
+		5D0E9CF727E99CF800DCC0FF /* FXLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CF627E99CF800DCC0FF /* FXLoginView.swift */; };
+		5D0E9CFF27EAE84E00DCC0FF /* HUIConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CFE27EAE84E00DCC0FF /* HUIConversationView.swift */; };
+		5D0E9D0227EB001500DCC0FF /* FXIMMessageGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9D0127EB001500DCC0FF /* FXIMMessageGen.swift */; };
+		5D0E9D0427EB003D00DCC0FF /* HIMError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9D0327EB003D00DCC0FF /* HIMError.swift */; };
+		5D0EDDF727CEFB4800E4C22F /* FXIMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDDF627CEFB4800E4C22F /* FXIMApp.swift */; };
+		5D0EDDF927CEFB4800E4C22F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDDF827CEFB4800E4C22F /* ContentView.swift */; };
+		5D0EDDFB27CEFB4A00E4C22F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D0EDDFA27CEFB4A00E4C22F /* Assets.xcassets */; };
+		5D0EDDFE27CEFB4A00E4C22F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D0EDDFD27CEFB4A00E4C22F /* Preview Assets.xcassets */; };
+		5D0EDE0027CEFB4A00E4C22F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDDFF27CEFB4A00E4C22F /* Persistence.swift */; };
+		5D0EDE0327CEFB4A00E4C22F /* FXIM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE0127CEFB4A00E4C22F /* FXIM.xcdatamodeld */; };
+		5D0EDE0D27CEFB4B00E4C22F /* FXIMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE0C27CEFB4B00E4C22F /* FXIMTests.swift */; };
+		5D0EDE1727CEFB4B00E4C22F /* FXIMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE1627CEFB4B00E4C22F /* FXIMUITests.swift */; };
+		5D0EDE1927CEFB4B00E4C22F /* FXIMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE1827CEFB4B00E4C22F /* FXIMUITestsLaunchTests.swift */; };
+		5D0EDE2927CEFBEA00E4C22F /* FXAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE2627CEFBEA00E4C22F /* FXAPI.swift */; };
+		5D0EDE2A27CEFBEA00E4C22F /* FXNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE2727CEFBEA00E4C22F /* FXNetworkError.swift */; };
+		5D0EDE2B27CEFBEA00E4C22F /* FXNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE2827CEFBEA00E4C22F /* FXNetwork.swift */; };
+		5D0EDE4F27CF14CA00E4C22F /* FXConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE4A27CF14CA00E4C22F /* FXConfig.swift */; };
+		5D0EDE5027CF14CA00E4C22F /* FXServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE4C27CF14CA00E4C22F /* FXServerConfig.swift */; };
+		5D0EDE9227CF150100E4C22F /* FXPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE5527CF150100E4C22F /* FXPropertyWrapper.swift */; };
+		5D0EDE9727CF150100E4C22F /* FXLagMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE5C27CF150100E4C22F /* FXLagMonitor.swift */; };
+		5D0EDE9C27CF150100E4C22F /* FXStringE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE6327CF150100E4C22F /* FXStringE.swift */; };
+		5D0EDE9D27CF150100E4C22F /* FXJSONDecoderE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE6427CF150100E4C22F /* FXJSONDecoderE.swift */; };
+		5D0EDE9F27CF150100E4C22F /* FXAttributedStrE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE6627CF150100E4C22F /* FXAttributedStrE.swift */; };
+		5D0EDEA027CF150100E4C22F /* FXArrayE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE6727CF150100E4C22F /* FXArrayE.swift */; };
+		5D0EDEA327CF150100E4C22F /* FXUserDefaultsE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE6A27CF150100E4C22F /* FXUserDefaultsE.swift */; };
+		5D0EDEA727CF150100E4C22F /* SwiftyFitsize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE6E27CF150100E4C22F /* SwiftyFitsize.swift */; };
+		5D0EDEAA27CF150100E4C22F /* FXDeviceE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE7127CF150100E4C22F /* FXDeviceE.swift */; };
+		5D0EDEAB27CF150100E4C22F /* FXDateE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE7227CF150100E4C22F /* FXDateE.swift */; };
+		5D0EDEAF27CF150100E4C22F /* FXWindowE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE7627CF150100E4C22F /* FXWindowE.swift */; };
+		5D0EDEB027CF150100E4C22F /* FXJSONEncoderE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE7727CF150100E4C22F /* FXJSONEncoderE.swift */; };
+		5D0EDEB227CF150100E4C22F /* FXDecimalNumbereE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE7927CF150100E4C22F /* FXDecimalNumbereE.swift */; };
+		5D0EDEB327CF150100E4C22F /* FXDictionaryE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE7A27CF150100E4C22F /* FXDictionaryE.swift */; };
+		5D0EDEB427CF150100E4C22F /* FXNamespaceWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE7B27CF150100E4C22F /* FXNamespaceWrapper.swift */; };
+		5D0EDEB527CF150100E4C22F /* FXDataE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE7C27CF150100E4C22F /* FXDataE.swift */; };
+		5D0EDEB627CF150100E4C22F /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE7E27CF150100E4C22F /* ToastView.swift */; };
+		5D0EDEB727CF150100E4C22F /* FXShowTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE7F27CF150100E4C22F /* FXShowTextView.swift */; };
+		5D0EDEB827CF150100E4C22F /* FXHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE8027CF150100E4C22F /* FXHud.swift */; };
+		5D0EDEBA27CF150100E4C22F /* FXRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE8327CF150100E4C22F /* FXRouter.swift */; };
+		5D0EDEBD27CF150100E4C22F /* FXUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE8727CF150100E4C22F /* FXUtils.swift */; };
+		5D0EDEC027CF150100E4C22F /* FXLanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDE8C27CF150100E4C22F /* FXLanguageManager.swift */; };
+		5D0EDEC727CF1C0800E4C22F /* HUIChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDEC627CF1C0800E4C22F /* HUIChatListView.swift */; };
+		5D0EDEC927CF1D6D00E4C22F /* HUIMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDEC827CF1D6D00E4C22F /* HUIMessageView.swift */; };
+		5D0EDF0A27D0BBB900E4C22F /* HUIMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDF0927D0BBB900E4C22F /* HUIMessage.swift */; };
+		5D0EDF0D27D0BE9A00E4C22F /* HUIChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0EDF0C27D0BE9A00E4C22F /* HUIChatView.swift */; };
+		5D6AEA4A27ED8A03005889FC /* HIMStocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6AEA4927ED8A03005889FC /* HIMStocketManager.swift */; };
+		8E80F628EF7469997B731D00 /* Pods_FXIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDBDC21044E9F6A0E37A664 /* Pods_FXIM.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D0EDE0927CEFB4B00E4C22F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D0EDDEB27CEFB4800E4C22F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D0EDDF227CEFB4800E4C22F;
+			remoteInfo = FXIM;
+		};
+		5D0EDE1327CEFB4B00E4C22F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D0EDDEB27CEFB4800E4C22F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D0EDDF227CEFB4800E4C22F;
+			remoteInfo = FXIM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5CDBDC21044E9F6A0E37A664 /* Pods_FXIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FXIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D0E9CC127E8666000DCC0FF /* HUICommonCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUICommonCellData.swift; sourceTree = "<group>"; };
+		5D0E9CC327E8698500DCC0FF /* HIMSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIMSDK.swift; sourceTree = "<group>"; };
+		5D0E9CC527E86CCB00DCC0FF /* HIMClientSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIMClientSocket.swift; sourceTree = "<group>"; };
+		5D0E9CC827E86EAA00DCC0FF /* HIMConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIMConfig.swift; sourceTree = "<group>"; };
+		5D0E9CCD27E8743E00DCC0FF /* HIMMessageListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIMMessageListener.swift; sourceTree = "<group>"; };
+		5D0E9CD327E87D0A00DCC0FF /* HIMLoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIMLoginManager.swift; sourceTree = "<group>"; };
+		5D0E9CD527E87D1100DCC0FF /* FXIMBaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXIMBaseManager.swift; sourceTree = "<group>"; };
+		5D0E9CD727E87D1B00DCC0FF /* HIMMessageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIMMessageProtocol.swift; sourceTree = "<group>"; };
+		5D0E9CD927E87D4300DCC0FF /* FXIMMessageAckManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXIMMessageAckManager.swift; sourceTree = "<group>"; };
+		5D0E9CDA27E87D4300DCC0FF /* FXIMConversationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXIMConversationManager.swift; sourceTree = "<group>"; };
+		5D0E9CDB27E87D4300DCC0FF /* FXIMMessageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXIMMessageManager.swift; sourceTree = "<group>"; };
+		5D0E9CE527E8838900DCC0FF /* him.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = him.pb.swift; sourceTree = "<group>"; };
+		5D0E9CE627E8838900DCC0FF /* msg.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = msg.pb.swift; sourceTree = "<group>"; };
+		5D0E9CE927E96CF900DCC0FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5D0E9CEA27E9791D00DCC0FF /* FXUIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXUIConfig.swift; sourceTree = "<group>"; };
+		5D0E9CEC27E991AE00DCC0FF /* FXUserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXUserManager.swift; sourceTree = "<group>"; };
+		5D0E9CEE27E9949A00DCC0FF /* FXIMAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXIMAppManager.swift; sourceTree = "<group>"; };
+		5D0E9CF027E99ACC00DCC0FF /* FXTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXTabView.swift; sourceTree = "<group>"; };
+		5D0E9CF227E99B1400DCC0FF /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		5D0E9CF427E99C9400DCC0FF /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		5D0E9CF627E99CF800DCC0FF /* FXLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXLoginView.swift; sourceTree = "<group>"; };
+		5D0E9CFE27EAE84E00DCC0FF /* HUIConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUIConversationView.swift; sourceTree = "<group>"; };
+		5D0E9D0127EB001500DCC0FF /* FXIMMessageGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXIMMessageGen.swift; sourceTree = "<group>"; };
+		5D0E9D0327EB003D00DCC0FF /* HIMError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIMError.swift; sourceTree = "<group>"; };
+		5D0EDDF327CEFB4800E4C22F /* FXIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FXIM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D0EDDF627CEFB4800E4C22F /* FXIMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXIMApp.swift; sourceTree = "<group>"; };
+		5D0EDDF827CEFB4800E4C22F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5D0EDDFA27CEFB4A00E4C22F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5D0EDDFD27CEFB4A00E4C22F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5D0EDDFF27CEFB4A00E4C22F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		5D0EDE0227CEFB4A00E4C22F /* FXIM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FXIM.xcdatamodel; sourceTree = "<group>"; };
+		5D0EDE0827CEFB4B00E4C22F /* FXIMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FXIMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D0EDE0C27CEFB4B00E4C22F /* FXIMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXIMTests.swift; sourceTree = "<group>"; };
+		5D0EDE1227CEFB4B00E4C22F /* FXIMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FXIMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D0EDE1627CEFB4B00E4C22F /* FXIMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXIMUITests.swift; sourceTree = "<group>"; };
+		5D0EDE1827CEFB4B00E4C22F /* FXIMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXIMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5D0EDE2627CEFBEA00E4C22F /* FXAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXAPI.swift; sourceTree = "<group>"; };
+		5D0EDE2727CEFBEA00E4C22F /* FXNetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXNetworkError.swift; sourceTree = "<group>"; };
+		5D0EDE2827CEFBEA00E4C22F /* FXNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXNetwork.swift; sourceTree = "<group>"; };
+		5D0EDE4A27CF14CA00E4C22F /* FXConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXConfig.swift; sourceTree = "<group>"; };
+		5D0EDE4C27CF14CA00E4C22F /* FXServerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXServerConfig.swift; sourceTree = "<group>"; };
+		5D0EDE5527CF150100E4C22F /* FXPropertyWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXPropertyWrapper.swift; sourceTree = "<group>"; };
+		5D0EDE5C27CF150100E4C22F /* FXLagMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXLagMonitor.swift; sourceTree = "<group>"; };
+		5D0EDE6327CF150100E4C22F /* FXStringE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXStringE.swift; sourceTree = "<group>"; };
+		5D0EDE6427CF150100E4C22F /* FXJSONDecoderE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXJSONDecoderE.swift; sourceTree = "<group>"; };
+		5D0EDE6627CF150100E4C22F /* FXAttributedStrE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXAttributedStrE.swift; sourceTree = "<group>"; };
+		5D0EDE6727CF150100E4C22F /* FXArrayE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXArrayE.swift; sourceTree = "<group>"; };
+		5D0EDE6A27CF150100E4C22F /* FXUserDefaultsE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXUserDefaultsE.swift; sourceTree = "<group>"; };
+		5D0EDE6E27CF150100E4C22F /* SwiftyFitsize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyFitsize.swift; sourceTree = "<group>"; };
+		5D0EDE7127CF150100E4C22F /* FXDeviceE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXDeviceE.swift; sourceTree = "<group>"; };
+		5D0EDE7227CF150100E4C22F /* FXDateE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXDateE.swift; sourceTree = "<group>"; };
+		5D0EDE7627CF150100E4C22F /* FXWindowE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXWindowE.swift; sourceTree = "<group>"; };
+		5D0EDE7727CF150100E4C22F /* FXJSONEncoderE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXJSONEncoderE.swift; sourceTree = "<group>"; };
+		5D0EDE7927CF150100E4C22F /* FXDecimalNumbereE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXDecimalNumbereE.swift; sourceTree = "<group>"; };
+		5D0EDE7A27CF150100E4C22F /* FXDictionaryE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXDictionaryE.swift; sourceTree = "<group>"; };
+		5D0EDE7B27CF150100E4C22F /* FXNamespaceWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXNamespaceWrapper.swift; sourceTree = "<group>"; };
+		5D0EDE7C27CF150100E4C22F /* FXDataE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXDataE.swift; sourceTree = "<group>"; };
+		5D0EDE7E27CF150100E4C22F /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		5D0EDE7F27CF150100E4C22F /* FXShowTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXShowTextView.swift; sourceTree = "<group>"; };
+		5D0EDE8027CF150100E4C22F /* FXHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXHud.swift; sourceTree = "<group>"; };
+		5D0EDE8327CF150100E4C22F /* FXRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXRouter.swift; sourceTree = "<group>"; };
+		5D0EDE8727CF150100E4C22F /* FXUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXUtils.swift; sourceTree = "<group>"; };
+		5D0EDE8C27CF150100E4C22F /* FXLanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXLanguageManager.swift; sourceTree = "<group>"; };
+		5D0EDEC627CF1C0800E4C22F /* HUIChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUIChatListView.swift; sourceTree = "<group>"; };
+		5D0EDEC827CF1D6D00E4C22F /* HUIMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUIMessageView.swift; sourceTree = "<group>"; };
+		5D0EDF0927D0BBB900E4C22F /* HUIMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUIMessage.swift; sourceTree = "<group>"; };
+		5D0EDF0C27D0BE9A00E4C22F /* HUIChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUIChatView.swift; sourceTree = "<group>"; };
+		5D6AEA4927ED8A03005889FC /* HIMStocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIMStocketManager.swift; sourceTree = "<group>"; };
+		9A5143460F4C59A064F645E6 /* Pods-FXIM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FXIM.debug.xcconfig"; path = "Target Support Files/Pods-FXIM/Pods-FXIM.debug.xcconfig"; sourceTree = "<group>"; };
+		A272D6CA1163B8E59327D054 /* Pods-FXIM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FXIM.release.xcconfig"; path = "Target Support Files/Pods-FXIM/Pods-FXIM.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D0EDDF027CEFB4800E4C22F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E80F628EF7469997B731D00 /* Pods_FXIM.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D0EDE0527CEFB4B00E4C22F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D0EDE0F27CEFB4B00E4C22F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C43B2E7515F439A145A7214 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A5143460F4C59A064F645E6 /* Pods-FXIM.debug.xcconfig */,
+				A272D6CA1163B8E59327D054 /* Pods-FXIM.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4ADD79972F5EDC226002156D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CDBDC21044E9F6A0E37A664 /* Pods_FXIM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D0E9CC727E86EA100DCC0FF /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				5D0E9CC827E86EAA00DCC0FF /* HIMConfig.swift */,
+				5D0E9CF427E99C9400DCC0FF /* Colors.swift */,
+				5D0E9D0327EB003D00DCC0FF /* HIMError.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		5D0E9CCA27E873E500DCC0FF /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				5D6AEA4C27ED8FB1005889FC /* Pack */,
+				5D6AEA4B27ED8FA4005889FC /* Socket */,
+				5D0E9CDA27E87D4300DCC0FF /* FXIMConversationManager.swift */,
+				5D0E9CDB27E87D4300DCC0FF /* FXIMMessageManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		5D0E9D0027EB001500DCC0FF /* Comm */ = {
+			isa = PBXGroup;
+			children = (
+				5D0E9D0127EB001500DCC0FF /* FXIMMessageGen.swift */,
+			);
+			path = Comm;
+			sourceTree = "<group>";
+		};
+		5D0EDDEA27CEFB4800E4C22F = {
+			isa = PBXGroup;
+			children = (
+				5D0EDDF527CEFB4800E4C22F /* FXIM */,
+				5D0EDE0B27CEFB4B00E4C22F /* FXIMTests */,
+				5D0EDE1527CEFB4B00E4C22F /* FXIMUITests */,
+				5D0EDDF427CEFB4800E4C22F /* Products */,
+				1C43B2E7515F439A145A7214 /* Pods */,
+				4ADD79972F5EDC226002156D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5D0EDDF427CEFB4800E4C22F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D0EDDF327CEFB4800E4C22F /* FXIM.app */,
+				5D0EDE0827CEFB4B00E4C22F /* FXIMTests.xctest */,
+				5D0EDE1227CEFB4B00E4C22F /* FXIMUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D0EDDF527CEFB4800E4C22F /* FXIM */ = {
+			isa = PBXGroup;
+			children = (
+				5D0E9CE927E96CF900DCC0FF /* Info.plist */,
+				5D0EDF0727D0B3B300E4C22F /* Modular */,
+				5D0EDF0527D096E600E4C22F /* HIM */,
+				5D0EDE5127CF150100E4C22F /* Helpers */,
+				5D0EDE4727CF14CA00E4C22F /* Configuration */,
+				5D0EDE2527CEFBEA00E4C22F /* FXNetwork */,
+				5D0EDDF627CEFB4800E4C22F /* FXIMApp.swift */,
+				5D0E9CEE27E9949A00DCC0FF /* FXIMAppManager.swift */,
+				5D0E9CEC27E991AE00DCC0FF /* FXUserManager.swift */,
+				5D0EDDF827CEFB4800E4C22F /* ContentView.swift */,
+				5D0EDDFA27CEFB4A00E4C22F /* Assets.xcassets */,
+				5D0EDDFC27CEFB4A00E4C22F /* Preview Content */,
+			);
+			path = FXIM;
+			sourceTree = "<group>";
+		};
+		5D0EDDFC27CEFB4A00E4C22F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5D0EDDFD27CEFB4A00E4C22F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5D0EDE0B27CEFB4B00E4C22F /* FXIMTests */ = {
+			isa = PBXGroup;
+			children = (
+				5D0EDE0C27CEFB4B00E4C22F /* FXIMTests.swift */,
+			);
+			path = FXIMTests;
+			sourceTree = "<group>";
+		};
+		5D0EDE1527CEFB4B00E4C22F /* FXIMUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5D0EDE1627CEFB4B00E4C22F /* FXIMUITests.swift */,
+				5D0EDE1827CEFB4B00E4C22F /* FXIMUITestsLaunchTests.swift */,
+			);
+			path = FXIMUITests;
+			sourceTree = "<group>";
+		};
+		5D0EDE2527CEFBEA00E4C22F /* FXNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				5D0EDE2627CEFBEA00E4C22F /* FXAPI.swift */,
+				5D0EDE2727CEFBEA00E4C22F /* FXNetworkError.swift */,
+				5D0EDE2827CEFBEA00E4C22F /* FXNetwork.swift */,
+			);
+			path = FXNetwork;
+			sourceTree = "<group>";
+		};
+		5D0EDE4727CF14CA00E4C22F /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				5D0EDE4A27CF14CA00E4C22F /* FXConfig.swift */,
+				5D0EDE4C27CF14CA00E4C22F /* FXServerConfig.swift */,
+				5D0E9CEA27E9791D00DCC0FF /* FXUIConfig.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		5D0EDE5127CF150100E4C22F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5D0EDE5427CF150100E4C22F /* FXPropertyWrapper */,
+				5D0EDE5B27CF150100E4C22F /* FXLagMonitor */,
+				5D0EDE5F27CF150100E4C22F /* Extension */,
+				5D0EDE7D27CF150100E4C22F /* FXHud */,
+				5D0EDE8227CF150100E4C22F /* FXRouter */,
+				5D0EDE8727CF150100E4C22F /* FXUtils.swift */,
+				5D0EDE8C27CF150100E4C22F /* FXLanguageManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5D0EDE5427CF150100E4C22F /* FXPropertyWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				5D0EDE5527CF150100E4C22F /* FXPropertyWrapper.swift */,
+			);
+			path = FXPropertyWrapper;
+			sourceTree = "<group>";
+		};
+		5D0EDE5B27CF150100E4C22F /* FXLagMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				5D0EDE5C27CF150100E4C22F /* FXLagMonitor.swift */,
+			);
+			path = FXLagMonitor;
+			sourceTree = "<group>";
+		};
+		5D0EDE5F27CF150100E4C22F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5D0EDE6327CF150100E4C22F /* FXStringE.swift */,
+				5D0EDE6427CF150100E4C22F /* FXJSONDecoderE.swift */,
+				5D0EDE6627CF150100E4C22F /* FXAttributedStrE.swift */,
+				5D0EDE6727CF150100E4C22F /* FXArrayE.swift */,
+				5D0EDE6A27CF150100E4C22F /* FXUserDefaultsE.swift */,
+				5D0EDE6E27CF150100E4C22F /* SwiftyFitsize.swift */,
+				5D0EDE7127CF150100E4C22F /* FXDeviceE.swift */,
+				5D0EDE7227CF150100E4C22F /* FXDateE.swift */,
+				5D0EDE7627CF150100E4C22F /* FXWindowE.swift */,
+				5D0EDE7727CF150100E4C22F /* FXJSONEncoderE.swift */,
+				5D0EDE7927CF150100E4C22F /* FXDecimalNumbereE.swift */,
+				5D0EDE7A27CF150100E4C22F /* FXDictionaryE.swift */,
+				5D0EDE7B27CF150100E4C22F /* FXNamespaceWrapper.swift */,
+				5D0EDE7C27CF150100E4C22F /* FXDataE.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5D0EDE7D27CF150100E4C22F /* FXHud */ = {
+			isa = PBXGroup;
+			children = (
+				5D0EDE7E27CF150100E4C22F /* ToastView.swift */,
+				5D0EDE7F27CF150100E4C22F /* FXShowTextView.swift */,
+				5D0EDE8027CF150100E4C22F /* FXHud.swift */,
+			);
+			path = FXHud;
+			sourceTree = "<group>";
+		};
+		5D0EDE8227CF150100E4C22F /* FXRouter */ = {
+			isa = PBXGroup;
+			children = (
+				5D0EDE8327CF150100E4C22F /* FXRouter.swift */,
+			);
+			path = FXRouter;
+			sourceTree = "<group>";
+		};
+		5D0EDEC327CF1BCD00E4C22F /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				5D0E9CF227E99B1400DCC0FF /* TabBarItem.swift */,
+				5D0EDEC627CF1C0800E4C22F /* HUIChatListView.swift */,
+				5D0EDEC827CF1D6D00E4C22F /* HUIMessageView.swift */,
+				5D0E9CF027E99ACC00DCC0FF /* FXTabView.swift */,
+				5D0E9CF627E99CF800DCC0FF /* FXLoginView.swift */,
+				5D0E9CFE27EAE84E00DCC0FF /* HUIConversationView.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		5D0EDF0527D096E600E4C22F /* HIM */ = {
+			isa = PBXGroup;
+			children = (
+				5D0E9D0027EB001500DCC0FF /* Comm */,
+				5D0E9CCA27E873E500DCC0FF /* Manager */,
+				5D0E9CC727E86EA100DCC0FF /* Config */,
+				5D0EDF0827D0B4C300E4C22F /* Models */,
+				5D0EDF0627D0B10E00E4C22F /* CoreData */,
+				5D0E9CC327E8698500DCC0FF /* HIMSDK.swift */,
+			);
+			path = HIM;
+			sourceTree = "<group>";
+		};
+		5D0EDF0627D0B10E00E4C22F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5D0EDDFF27CEFB4A00E4C22F /* Persistence.swift */,
+				5D0EDE0127CEFB4A00E4C22F /* FXIM.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		5D0EDF0727D0B3B300E4C22F /* Modular */ = {
+			isa = PBXGroup;
+			children = (
+				5D0EDF0B27D0BE8400E4C22F /* HUI */,
+				5D0EDEC327CF1BCD00E4C22F /* Tab */,
+			);
+			path = Modular;
+			sourceTree = "<group>";
+		};
+		5D0EDF0827D0B4C300E4C22F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5D0E9CE527E8838900DCC0FF /* him.pb.swift */,
+				5D0E9CE627E8838900DCC0FF /* msg.pb.swift */,
+				5D0EDF0927D0BBB900E4C22F /* HUIMessage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5D0EDF0B27D0BE8400E4C22F /* HUI */ = {
+			isa = PBXGroup;
+			children = (
+				5D0E9CC127E8666000DCC0FF /* HUICommonCellData.swift */,
+				5D0EDF0C27D0BE9A00E4C22F /* HUIChatView.swift */,
+			);
+			path = HUI;
+			sourceTree = "<group>";
+		};
+		5D6AEA4B27ED8FA4005889FC /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				5D6AEA4927ED8A03005889FC /* HIMStocketManager.swift */,
+				5D0E9CC527E86CCB00DCC0FF /* HIMClientSocket.swift */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
+		5D6AEA4C27ED8FB1005889FC /* Pack */ = {
+			isa = PBXGroup;
+			children = (
+				5D0E9CD727E87D1B00DCC0FF /* HIMMessageProtocol.swift */,
+				5D0E9CD527E87D1100DCC0FF /* FXIMBaseManager.swift */,
+				5D0E9CD927E87D4300DCC0FF /* FXIMMessageAckManager.swift */,
+				5D0E9CD327E87D0A00DCC0FF /* HIMLoginManager.swift */,
+				5D0E9CCD27E8743E00DCC0FF /* HIMMessageListener.swift */,
+			);
+			path = Pack;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5D0EDDF227CEFB4800E4C22F /* FXIM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D0EDE1C27CEFB4B00E4C22F /* Build configuration list for PBXNativeTarget "FXIM" */;
+			buildPhases = (
+				AC831854329B0D5964A4E371 /* [CP] Check Pods Manifest.lock */,
+				5D0EDDEF27CEFB4800E4C22F /* Sources */,
+				5D0EDDF027CEFB4800E4C22F /* Frameworks */,
+				5D0EDDF127CEFB4800E4C22F /* Resources */,
+				097D4480D5CC645E6B61C16D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FXIM;
+			productName = FXIM;
+			productReference = 5D0EDDF327CEFB4800E4C22F /* FXIM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5D0EDE0727CEFB4B00E4C22F /* FXIMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D0EDE1F27CEFB4B00E4C22F /* Build configuration list for PBXNativeTarget "FXIMTests" */;
+			buildPhases = (
+				5D0EDE0427CEFB4B00E4C22F /* Sources */,
+				5D0EDE0527CEFB4B00E4C22F /* Frameworks */,
+				5D0EDE0627CEFB4B00E4C22F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D0EDE0A27CEFB4B00E4C22F /* PBXTargetDependency */,
+			);
+			name = FXIMTests;
+			productName = FXIMTests;
+			productReference = 5D0EDE0827CEFB4B00E4C22F /* FXIMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5D0EDE1127CEFB4B00E4C22F /* FXIMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D0EDE2227CEFB4B00E4C22F /* Build configuration list for PBXNativeTarget "FXIMUITests" */;
+			buildPhases = (
+				5D0EDE0E27CEFB4B00E4C22F /* Sources */,
+				5D0EDE0F27CEFB4B00E4C22F /* Frameworks */,
+				5D0EDE1027CEFB4B00E4C22F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D0EDE1427CEFB4B00E4C22F /* PBXTargetDependency */,
+			);
+			name = FXIMUITests;
+			productName = FXIMUITests;
+			productReference = 5D0EDE1227CEFB4B00E4C22F /* FXIMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D0EDDEB27CEFB4800E4C22F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = FX;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					5D0EDDF227CEFB4800E4C22F = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					5D0EDE0727CEFB4B00E4C22F = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 5D0EDDF227CEFB4800E4C22F;
+					};
+					5D0EDE1127CEFB4B00E4C22F = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 5D0EDDF227CEFB4800E4C22F;
+					};
+				};
+			};
+			buildConfigurationList = 5D0EDDEE27CEFB4800E4C22F /* Build configuration list for PBXProject "FXIM" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5D0EDDEA27CEFB4800E4C22F;
+			productRefGroup = 5D0EDDF427CEFB4800E4C22F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5D0EDDF227CEFB4800E4C22F /* FXIM */,
+				5D0EDE0727CEFB4B00E4C22F /* FXIMTests */,
+				5D0EDE1127CEFB4B00E4C22F /* FXIMUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D0EDDF127CEFB4800E4C22F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D0EDDFE27CEFB4A00E4C22F /* Preview Assets.xcassets in Resources */,
+				5D0EDDFB27CEFB4A00E4C22F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D0EDE0627CEFB4B00E4C22F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D0EDE1027CEFB4B00E4C22F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		097D4480D5CC645E6B61C16D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FXIM/Pods-FXIM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FXIM/Pods-FXIM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FXIM/Pods-FXIM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC831854329B0D5964A4E371 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FXIM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D0EDDEF27CEFB4800E4C22F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D0EDEBA27CF150100E4C22F /* FXRouter.swift in Sources */,
+				5D0EDE9227CF150100E4C22F /* FXPropertyWrapper.swift in Sources */,
+				5D0EDE2927CEFBEA00E4C22F /* FXAPI.swift in Sources */,
+				5D0EDEAB27CF150100E4C22F /* FXDateE.swift in Sources */,
+				5D0EDF0A27D0BBB900E4C22F /* HUIMessage.swift in Sources */,
+				5D6AEA4A27ED8A03005889FC /* HIMStocketManager.swift in Sources */,
+				5D0EDE9D27CF150100E4C22F /* FXJSONDecoderE.swift in Sources */,
+				5D0EDE9F27CF150100E4C22F /* FXAttributedStrE.swift in Sources */,
+				5D0EDE2A27CEFBEA00E4C22F /* FXNetworkError.swift in Sources */,
+				5D0EDEA027CF150100E4C22F /* FXArrayE.swift in Sources */,
+				5D0EDEB727CF150100E4C22F /* FXShowTextView.swift in Sources */,
+				5D0E9CED27E991AE00DCC0FF /* FXUserManager.swift in Sources */,
+				5D0EDE0027CEFB4A00E4C22F /* Persistence.swift in Sources */,
+				5D0EDE4F27CF14CA00E4C22F /* FXConfig.swift in Sources */,
+				5D0EDEAA27CF150100E4C22F /* FXDeviceE.swift in Sources */,
+				5D0EDEC927CF1D6D00E4C22F /* HUIMessageView.swift in Sources */,
+				5D0EDE5027CF14CA00E4C22F /* FXServerConfig.swift in Sources */,
+				5D0E9CCE27E8743E00DCC0FF /* HIMMessageListener.swift in Sources */,
+				5D0E9CF527E99C9400DCC0FF /* Colors.swift in Sources */,
+				5D0E9CDE27E87D4300DCC0FF /* FXIMMessageManager.swift in Sources */,
+				5D0E9CC227E8666000DCC0FF /* HUICommonCellData.swift in Sources */,
+				5D0E9CDD27E87D4300DCC0FF /* FXIMConversationManager.swift in Sources */,
+				5D0EDEB227CF150100E4C22F /* FXDecimalNumbereE.swift in Sources */,
+				5D0E9CF727E99CF800DCC0FF /* FXLoginView.swift in Sources */,
+				5D0E9D0427EB003D00DCC0FF /* HIMError.swift in Sources */,
+				5D0EDF0D27D0BE9A00E4C22F /* HUIChatView.swift in Sources */,
+				5D0EDEB827CF150100E4C22F /* FXHud.swift in Sources */,
+				5D0EDE0327CEFB4A00E4C22F /* FXIM.xcdatamodeld in Sources */,
+				5D0E9CEB27E9791D00DCC0FF /* FXUIConfig.swift in Sources */,
+				5D0EDEA727CF150100E4C22F /* SwiftyFitsize.swift in Sources */,
+				5D0E9D0227EB001500DCC0FF /* FXIMMessageGen.swift in Sources */,
+				5D0EDE9C27CF150100E4C22F /* FXStringE.swift in Sources */,
+				5D0EDE9727CF150100E4C22F /* FXLagMonitor.swift in Sources */,
+				5D0EDEA327CF150100E4C22F /* FXUserDefaultsE.swift in Sources */,
+				5D0E9CE727E8838900DCC0FF /* him.pb.swift in Sources */,
+				5D0EDDF927CEFB4800E4C22F /* ContentView.swift in Sources */,
+				5D0E9CD627E87D1100DCC0FF /* FXIMBaseManager.swift in Sources */,
+				5D0E9CC927E86EAA00DCC0FF /* HIMConfig.swift in Sources */,
+				5D0EDEB527CF150100E4C22F /* FXDataE.swift in Sources */,
+				5D0EDEC027CF150100E4C22F /* FXLanguageManager.swift in Sources */,
+				5D0EDEB627CF150100E4C22F /* ToastView.swift in Sources */,
+				5D0E9CFF27EAE84E00DCC0FF /* HUIConversationView.swift in Sources */,
+				5D0EDEC727CF1C0800E4C22F /* HUIChatListView.swift in Sources */,
+				5D0E9CF327E99B1400DCC0FF /* TabBarItem.swift in Sources */,
+				5D0EDEB027CF150100E4C22F /* FXJSONEncoderE.swift in Sources */,
+				5D0E9CD427E87D0B00DCC0FF /* HIMLoginManager.swift in Sources */,
+				5D0E9CC627E86CCB00DCC0FF /* HIMClientSocket.swift in Sources */,
+				5D0EDE2B27CEFBEA00E4C22F /* FXNetwork.swift in Sources */,
+				5D0E9CEF27E9949A00DCC0FF /* FXIMAppManager.swift in Sources */,
+				5D0EDEBD27CF150100E4C22F /* FXUtils.swift in Sources */,
+				5D0E9CE827E8838900DCC0FF /* msg.pb.swift in Sources */,
+				5D0E9CF127E99ACC00DCC0FF /* FXTabView.swift in Sources */,
+				5D0EDEB327CF150100E4C22F /* FXDictionaryE.swift in Sources */,
+				5D0E9CDC27E87D4300DCC0FF /* FXIMMessageAckManager.swift in Sources */,
+				5D0EDEAF27CF150100E4C22F /* FXWindowE.swift in Sources */,
+				5D0E9CD827E87D1B00DCC0FF /* HIMMessageProtocol.swift in Sources */,
+				5D0EDEB427CF150100E4C22F /* FXNamespaceWrapper.swift in Sources */,
+				5D0EDDF727CEFB4800E4C22F /* FXIMApp.swift in Sources */,
+				5D0E9CC427E8698500DCC0FF /* HIMSDK.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D0EDE0427CEFB4B00E4C22F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D0EDE0D27CEFB4B00E4C22F /* FXIMTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D0EDE0E27CEFB4B00E4C22F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D0EDE1927CEFB4B00E4C22F /* FXIMUITestsLaunchTests.swift in Sources */,
+				5D0EDE1727CEFB4B00E4C22F /* FXIMUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5D0EDE0A27CEFB4B00E4C22F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D0EDDF227CEFB4800E4C22F /* FXIM */;
+			targetProxy = 5D0EDE0927CEFB4B00E4C22F /* PBXContainerItemProxy */;
+		};
+		5D0EDE1427CEFB4B00E4C22F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D0EDDF227CEFB4800E4C22F /* FXIM */;
+			targetProxy = 5D0EDE1327CEFB4B00E4C22F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5D0EDE1A27CEFB4B00E4C22F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5D0EDE1B27CEFB4B00E4C22F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5D0EDE1D27CEFB4B00E4C22F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A5143460F4C59A064F645E6 /* Pods-FXIM.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FXIM/Preview Content\"";
+				DEVELOPMENT_TEAM = AFT3X3UN4B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FXIM/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fuxinto.FXIM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5D0EDE1E27CEFB4B00E4C22F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A272D6CA1163B8E59327D054 /* Pods-FXIM.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FXIM/Preview Content\"";
+				DEVELOPMENT_TEAM = AFT3X3UN4B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FXIM/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fuxinto.FXIM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5D0EDE2027CEFB4B00E4C22F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AFT3X3UN4B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fuxinto.FXIMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FXIM.app/FXIM";
+			};
+			name = Debug;
+		};
+		5D0EDE2127CEFB4B00E4C22F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AFT3X3UN4B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fuxinto.FXIMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FXIM.app/FXIM";
+			};
+			name = Release;
+		};
+		5D0EDE2327CEFB4B00E4C22F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AFT3X3UN4B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fuxinto.FXIMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FXIM;
+			};
+			name = Debug;
+		};
+		5D0EDE2427CEFB4B00E4C22F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AFT3X3UN4B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fuxinto.FXIMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FXIM;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5D0EDDEE27CEFB4800E4C22F /* Build configuration list for PBXProject "FXIM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D0EDE1A27CEFB4B00E4C22F /* Debug */,
+				5D0EDE1B27CEFB4B00E4C22F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D0EDE1C27CEFB4B00E4C22F /* Build configuration list for PBXNativeTarget "FXIM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D0EDE1D27CEFB4B00E4C22F /* Debug */,
+				5D0EDE1E27CEFB4B00E4C22F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D0EDE1F27CEFB4B00E4C22F /* Build configuration list for PBXNativeTarget "FXIMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D0EDE2027CEFB4B00E4C22F /* Debug */,
+				5D0EDE2127CEFB4B00E4C22F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D0EDE2227CEFB4B00E4C22F /* Build configuration list for PBXNativeTarget "FXIMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D0EDE2327CEFB4B00E4C22F /* Debug */,
+				5D0EDE2427CEFB4B00E4C22F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5D0EDE0127CEFB4A00E4C22F /* FXIM.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5D0EDE0227CEFB4A00E4C22F /* FXIM.xcdatamodel */,
+			);
+			currentVersion = 5D0EDE0227CEFB4A00E4C22F /* FXIM.xcdatamodel */;
+			path = FXIM.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5D0EDDEB27CEFB4800E4C22F /* Project object */;
+}
