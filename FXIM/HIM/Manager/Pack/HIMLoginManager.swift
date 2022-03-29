@@ -12,17 +12,17 @@ protocol HIMLoginDelegate:NSObjectProtocol {
     
     func loginFail()
 }
-class HIMLoginManager: FXIMBaseManager<Pb_LoginAck> {
+class HIMLoginManager: HIMBaseManager<Pb_LoginAck> {
     var token:String!
     var userId:String!
     weak var loginDelegate:HIMLoginDelegate?
     fileprivate var succ:HIMSucc?
     fileprivate var fail:HIMFail?
     //是否登录状态
-   fileprivate var isLogin = false
+var isLogin = false
     
     func sendLoginMessage() {
-        if let data = try? FXIMMessageGen.createLoginMsg(token: token) {
+        if let data = try? HIMMessageGen.createLoginMsg(token: token) {
             HIMSDK.shared.socketManager.push(body: data)
         }
     }
@@ -33,9 +33,13 @@ class HIMLoginManager: FXIMBaseManager<Pb_LoginAck> {
         self.succ = succ
         self.fail = fail
         HIMSDK.shared.socketManager.getDns()
-
     }
-
+    
+    func logout(succ:@escaping HIMSucc,fail:@escaping HIMFail) {
+        self.succ = succ
+        self.fail = fail
+    }
+    
     override func bodyClass() -> Pb_LoginAck.Type {
         return Pb_LoginAck.self
     }
@@ -44,22 +48,29 @@ class HIMLoginManager: FXIMBaseManager<Pb_LoginAck> {
         if isLogin {
             return
         }
-//        , body.userID == self.userId/
-        guard body.code == 200 else {
-            if !isLogin {
-                FXMain {
-                    self.fail?(Int(body.code),body.msg)
-                }
+        
+        switch body.code{
+        case 200:
+            isLogin = true
+            loginDelegate?.loginSucc()
+            FXMain {
+                self.succ?()
             }
-            return
+
+            
+        case 401:
+            isLogin = false
+            //踢出登录
+            FXMain {
+                self.fail?(Int(body.code),body.msg)
+            }
+            break
+        default:
+            break
         }
         //这三行代码注意执行顺序
-        isLogin = true
-        loginDelegate?.loginSucc()
-        FXMain {
-            self.succ?()
-        }
-
+   
+        
     }
 
 }

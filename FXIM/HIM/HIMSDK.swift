@@ -36,10 +36,5 @@ class HIMSDK{
     fileprivate init (){
         
     }
-
-    func login(userId:String,token:String,succ:@escaping HIMSucc,fail:@escaping HIMFail) {
-        socketManager.loginManager.login(userId: userId, token: token, succ: succ, fail: fail)
-    }
-
- 
+    
 }

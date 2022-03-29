@@ -32,7 +32,7 @@ class HIMStocketManager: NSObject{
     let loginManager = HIMLoginManager()
     //断开重连
    fileprivate  func startReConnect() {
-        if(!isConnected && self.timeInterval<65 ){
+       if(!isConnected && self.timeInterval<65 && loginManager.isLogin){
             //启动一个定时器执行
             // 4.GCD 主线程/子线程
             DispatchQueue.global().asyncAfter(deadline: .now() + timeInterval) {

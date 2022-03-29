@@ -1,14 +1,14 @@
 import SwiftUI
 
 enum TabBarItem: Int {
-  case chats
+  case session
   case contacts
   case discover
   case me
 
   var title: String {
     switch self {
-    case .chats:
+    case .session:
         return "聊天"
 //      return Strings.tabbar_chats()
     case .contacts:
@@ -23,7 +23,7 @@ enum TabBarItem: Int {
   var defaultImage: Image {
     let name: String
     switch self {
-    case .chats:
+    case .session:
       name = "icons_outlined_chats"
     case .contacts:
       name = "icons_outlined_contacts"
@@ -38,7 +38,7 @@ enum TabBarItem: Int {
   var selectedImage: Image {
     let name: String
     switch self {
-    case .chats:
+    case .session:
       name = "icons_filled_chats"
     case .contacts:
       name = "icons_filled_contacts"

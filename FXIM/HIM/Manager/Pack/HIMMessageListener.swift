@@ -18,7 +18,7 @@ class HIMMessageListener:NSObject,HIMMessageListenerDelegate {
     fileprivate var receiveData = Data.init()
     var loginManager : HIMLoginManager!
     let messageManager = FXIMMessageManager()
-    let messageAckManager = FXIMMessageAckManager()
+    let messageAckManager = HIMMessageAckManager()
 //    let conversationManager = FXIMConversationManager()
     var handlerDict = Dictionary<Int,HIMMessageProtocol>()
 //   var messageTypeDict = [Int16:FXIMPbSerializedProtocol.Type]()

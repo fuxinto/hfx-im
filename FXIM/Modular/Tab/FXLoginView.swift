@@ -33,7 +33,7 @@ struct FXLoginView: View {
 //            }
             
             Button("登录") {
-                FXIMAppManager.share.passwordLogin(account: "fuxinto", password: "fuxintojack135941")
+                FXIMAppManager.share.passwordLogin(account: account, password: "fuxintojack135941")
             }
             .foregroundColor(.white)
             .frame(width: SCREEN_WIDTH-40, height: 50, alignment: .center)

@@ -10,7 +10,7 @@ import Foundation
 import SwiftProtobuf
 
 
-class FXIMBaseManager<T:SwiftProtobuf.Message>:NSObject,HIMMessageProtocol {
+class HIMBaseManager<T:SwiftProtobuf.Message>:NSObject,HIMMessageProtocol {
         //业务分发
     func handler(pack: Pb_Pack) {
         do {

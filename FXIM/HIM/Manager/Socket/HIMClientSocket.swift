@@ -44,7 +44,7 @@ class HIMClientSocket:NSObject,HIMSocketDelegate {
     }
     
     func write(data: Data) {
-        clientSocket.write(data, withTimeout: 10, tag: 0)
+        clientSocket.write(data, withTimeout: -1, tag: 1)
     
     }
 }

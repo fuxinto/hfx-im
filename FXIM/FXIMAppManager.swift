@@ -36,7 +36,7 @@ class FXIMAppManager:ObservableObject{
         guard let model = user else {
             return
         }
-        HIMSDK.shared.login(userId: model.uid, token: model.userToken) {
+        HIMSDK.shared.socketManager.loginManager.login(userId: model.uid, token: model.userToken) {
             self.isLogin = true
         } fail: { code, msg in
             FXHud.showText(msg)

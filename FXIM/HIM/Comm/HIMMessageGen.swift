@@ -7,10 +7,8 @@
 
 import Foundation
 import SwiftProtobuf
-class FXIMMessageGen {
+class HIMMessageGen {
   
-    
-    
     /*创建ack*/
     class func createAck(msgId:String) throws -> Data{
         var chatMsgResp = Pb_MessageAck.init()
@@ -31,9 +29,8 @@ class FXIMMessageGen {
             messageBuilder.body = try body.serializedData()
             return try messageBuilder.serializedData()
         } catch {
-            FXLog(error)
-            FXLog("protobuf序列化失败")
-            throw HIMError.protobufSerializedFail
+            FXLog(error.localizedDescription)
+            throw HIMError.protobufSerializedFail(err: error)
         }
     }
 }

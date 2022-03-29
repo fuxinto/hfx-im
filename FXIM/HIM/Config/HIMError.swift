@@ -8,19 +8,22 @@
 import Foundation
 
 enum HIMError:Error {
-    case protobufSerializedFail //proto错误
-    case other//其它错误
-   
+    case coreDataSaveError(err:Error)
+    case protobufError(err:Error)
+    case updateError(err:Error)
+    case protobufSerializedFail(err:Error)
 }
-
 extension HIMError: LocalizedError {
     public var errorDescription: String? {
         switch self {
-        case .protobufSerializedFail:
-            return "protobuf错误"
-        case .other:
-            return "其它错误"
-       
+        case .coreDataSaveError(let err):
+            return "coreDataSave错误,err =\(err.localizedDescription)"
+        case .protobufError(let err):
+            return "pb转data错误,err =\(err.localizedDescription)"
+        case .updateError(let err):
+            return "update message 错误,err=\(err.localizedDescription)"
+        case .protobufSerializedFail(let err):
+            return "protobuf Serialized 错误,err=\(err.localizedDescription)"
         }
     }
 }
