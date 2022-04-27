@@ -10,27 +10,29 @@ import SwiftProtobuf
 class HIMMessageGen {
   
     /*创建ack*/
-    class func createAck(msgId:String) throws -> Data{
+    class func createAck(msgId:String) throws -> Data?{
         var chatMsgResp = Pb_MessageAck.init()
         chatMsgResp.messagedUid = msgId
-       return try createPack(body:chatMsgResp , type: Pb_PackType.msgAck)
+       return  createPack(body:chatMsgResp , type: Pb_PackType.msgAck)
     }
     //创建登录消息
-    class func createLoginMsg(token:String)throws -> Data {
+    class func createLoginMsg(token:String) -> Data? {
         var signin = Pb_LoginReq.init()
         signin.token = token
-        return try createPack(body:signin , type: Pb_PackType.loginReq)
+        return  createPack(body:signin , type: Pb_PackType.loginReq)
     }
     
-    class func createPack(body:SwiftProtobuf.Message,type:Pb_PackType)throws -> Data {
+    class func createPack(body:SwiftProtobuf.Message?,type:Pb_PackType) -> Data? {
         var messageBuilder = Pb_Pack.init()
         messageBuilder.type = type
         do {
-            messageBuilder.body = try body.serializedData()
+            if let msg = body {
+                messageBuilder.body = try msg.serializedData()
+            }
             return try messageBuilder.serializedData()
         } catch {
             FXLog(error.localizedDescription)
-            throw HIMError.protobufSerializedFail(err: error)
+            return nil
         }
     }
 }

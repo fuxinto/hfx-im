@@ -64,7 +64,6 @@ class FXIMMessageManager: HIMBaseManager<Pb_Message> {
             MsgsMonitor[key] = hander
             let data = try  msg.tranPbMsg()
             HIMSDK.shared.socketManager.push(body:data)
-            
               //异步延时检测是否发送成功
               DispatchQueue.global().asyncAfter(deadline: .now() + 3) {
                   guard let msgHandler = self.MsgsMonitor[key] else{

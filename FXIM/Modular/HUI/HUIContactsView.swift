@@ -11,16 +11,20 @@ struct HUIContactsView: View {
     var body: some View {
         NavigationView {
             Button {
-                var msg = Pb_Message.init()
-                msg.type = .text
-                msg.content = "测试数据"
-                do{
-                    let data = try HIMMessageGen.createPack(body: msg, type: .msgReq)
-                    HIMSDK.shared.socketManager.push(body: data)
-                }catch{
-                    
-                }
-            
+//                var msg = Pb_Message.init()
+//                msg.type = .text
+//                msg.content = "测试数据"
+//                do{
+//                    let data = try HIMMessageGen.createPack(body: msg, type: .msgReq)
+//                    HIMSDK.shared.socketManager.push(body: data)
+//                }catch{
+//
+//                }
+                
+                if let data =  HIMMessageGen.createPack(body: nil, type: .heartbeat){
+                                   
+                    HIMSDK.shared.socketManager.push(body: data)}
+               
             } label: {
                 Text("发送消息")
             }

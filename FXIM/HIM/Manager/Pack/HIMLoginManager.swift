@@ -22,7 +22,7 @@ class HIMLoginManager: HIMBaseManager<Pb_LoginAck> {
 var isLogin = false
     
     func sendLoginMessage() {
-        if let data = try? HIMMessageGen.createLoginMsg(token: token) {
+        if let data = HIMMessageGen.createLoginMsg(token: token) {
             HIMSDK.shared.socketManager.push(body: data)
         }
     }

@@ -41,7 +41,6 @@ class HIMStocketManager: NSObject{
                 self.startConnect()
             }
         }
-
     }
     
     var host:String!
@@ -55,45 +54,28 @@ class HIMStocketManager: NSObject{
         clientSocket = HIMClientSocket.init(stateListener: self, messageListener: messageListener)
         //启动一个定时器执行心跳
         heartTimer = DispatchSource.makeTimerSource(queue:DispatchQueue.global())
-        heartTimer.schedule(wallDeadline: .now(), repeating: .seconds(6))
+        heartTimer.schedule(wallDeadline: .now(), repeating: .seconds(10))
         // 设定时间源的触发事件
         heartTimer.setEventHandler(handler: {
-            self.packetPush(type: .ping)
+            if let heartbeatBody = HIMMessageGen.createPack(body: nil, type: .heartbeat) {
+                self.push(body: heartbeatBody)
+            }
         })
     }
     
-  
     func push(body:Data) {
-        packetPush(type: .binary, data: body)
+        guard self.isConnected else {
+            self.startReConnect()
+            return
+        }
+        FXLog("本次发送包体大小为：\(body.count)")
+        var a:Int32 = Int32(body.count)
+        let lenth = Data(bytes: &a, count: 4)
+        let msg = lenth+body
+        FXLog("封包后大小：\(msg.count)")
+        clientSocket.write(data: msg)
     }
     // MARK: - Private Selector
-   fileprivate func packetPush(type:HIMFrameType,data:Data? = nil) {
-     
-       guard self.isConnected else {
-           self.startReConnect()
-           return
-       }
-        switch type {
-        case .binary:
-            guard let body = data else {
-                FXLog("data为空，错误")
-                return
-            }
-            FXLog("本次发送包体大小为：\(body.count)")
-            var a:Int32 = Int32(body.count)
-            let lenth = Data(bytes: &a, count: 4)
-            let msg = Data([HIMFrameType.binary.rawValue])+lenth+body
-            FXLog("封包后大小：\(msg.count)")
-            clientSocket.write(data: msg)
-        case .pong:
-            FXLog("不可由client发送的消息")
-            return
-        default:
-            FXLog("发送心跳")
-            clientSocket.write(data: Data([type.rawValue]))
-        }
-    }
-    
     fileprivate func sendLoginMessage(){
         loginManager.sendLoginMessage()
     }
@@ -144,6 +126,7 @@ extension HIMStocketManager:HIMStateListenerDelegate{
         isConnected = true
         //发送登录消息
         sendLoginMessage()
+      
         FXLog("连接成功")
     }
     
