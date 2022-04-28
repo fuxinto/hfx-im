@@ -17,40 +17,36 @@ enum HIMFrameType:UInt8{
 class HIMMessageListener:NSObject,HIMMessageListenerDelegate {
     fileprivate var receiveData = Data.init()
     var loginManager : HIMLoginManager!
-    let messageManager = FXIMMessageManager()
-    let messageAckManager = HIMMessageAckManager()
-    
-//    let conversationManager = FXIMConversationManager()
-    var handlerDict = Dictionary<Int,HIMMessageProtocol>()
+    let messageManager = HIMMessageManager()
+    let messageAckHandler = HIMMessageAckHandler()
+    let messagePushHandler = HIMMessagePushHandler()
+    let sessionHandler = HIMSessionPushHandler()
+    var handlerDict = Dictionary<Pb_PackType,HIMMessageProtocol>()
 //   var messageTypeDict = [Int16:FXIMPbSerializedProtocol.Type]()
     
     override init(){
         super.init()
-        
+        initMesListener()
     }
     
     func initMesListener() {
-        setHandler(type: Pb_PackType.loginAck.rawValue, handler: loginManager)
-        setHandler(type: Pb_PackType.msgAck.rawValue, handler:messageAckManager)
-        setHandler(type: Pb_PackType.msgReq.rawValue, handler: messageManager)
-        
+        setHandler(type: Pb_PackType.loginAck, handler: loginManager)
+        setHandler(type: Pb_PackType.msgAck, handler:messageAckHandler)
+        setHandler(type: Pb_PackType.msgReq, handler: messageManager)
+        setHandler(type: Pb_PackType.msgPush, handler: messagePushHandler)
+//        setHandler(type: pb, handler: <#T##HIMMessageProtocol#>)
     }
     
-    fileprivate func setHandler(type:Int,handler:HIMMessageProtocol){
+    fileprivate func setHandler(type:Pb_PackType,handler:HIMMessageProtocol){
         handlerDict[type]=handler;
     }
-    fileprivate func getHandler(type:Int)->HIMMessageProtocol?{
+    fileprivate func getHandler(type:Pb_PackType)->HIMMessageProtocol?{
         return handlerDict[type];
     }
     func receive(data: Data) {
         guard let pack = unpack(data: data) else { return  }
-        FXLog(pack.type)
-        if pack.type == .heartbeatAck {
-            FXLog("收到心跳回应")
-            return
-        }
         //根据类型获取消息处理器
-        if let absHandler = handlerDict[pack.type.rawValue] {
+        if let absHandler = handlerDict[pack.type] {
             absHandler.handler(pack: pack)
         }else {
             FXLog("没有对应的消息处理器")

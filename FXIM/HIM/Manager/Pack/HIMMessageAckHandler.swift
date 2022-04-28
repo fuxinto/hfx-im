@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HIMMessageAckManager: HIMBaseManager<Pb_MessageAck> {
+class HIMMessageAckHandler: HIMBaseHandler<Pb_MessageAck> {
  
     override func bodyClass() -> Pb_MessageAck.Type {
         return Pb_MessageAck.self

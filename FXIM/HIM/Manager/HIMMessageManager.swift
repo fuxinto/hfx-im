@@ -35,11 +35,30 @@ class HIMMsgHandler{
     }
 }
 
-class FXIMMessageManager: HIMBaseManager<Pb_Message> {
+class HIMMessageManager: HIMBaseHandler<Pb_Message> {
     var MsgsMonitor = [String:HIMMsgHandler]()
-    func createTextMessage(text:String,to userId:String)throws -> HIMMessage {
+    
+    static func getLastMsgTimestamp() -> Int64? {
+        //建立一个请求
+        let request = HIMMessage.fetchRequest()
+        request.fetchLimit = 1
+        request.fetchOffset = 0
+        request.sortDescriptors = [NSSortDescriptor.init(key: "timestamp", ascending: false)]
+        
+        do {
+            let msg =  try PersistenceController.shared.privateContext.fetch(request)
+            
+            return msg.first?.timestamp
+        } catch let error {
+            FXLog("getLastMsgTimestamp(),error:\(error.localizedDescription)")
+            return nil
+        }
+    }
+    
+    
+    func createMessage(content:String,to userId:String) -> HIMMessage? {
         let msg = HIMMessage(context: PersistenceController.shared.privateContext)
-        msg.content = text
+        msg.content = content
         let user = HIMUser(context: PersistenceController.shared.privateContext)
         user.userId = HIMSDK.shared.socketManager.loginManager.userId
         msg.sendUser = user
@@ -51,14 +70,15 @@ class FXIMMessageManager: HIMBaseManager<Pb_Message> {
             try PersistenceController.shared.privateContext.save()
             return msg
         } catch (let err) {
-            throw HIMError.coreDataSaveError(err: err)
+            FXLog("创建消息失败:"+err.localizedDescription)
+            return nil
         }
     }
     
     func sendC2CTextMessage(text:String,to userId:String,succ:@escaping HIMSucc,fail:@escaping HIMFail) {
         do {
-           let msg = try createTextMessage(text: text, to: userId)
-            
+            guard  let msg = createMessage(content: text, to: userId) else { return fail(404,"本地消息创建失败") }
+
             let hander = HIMMsgHandler.init(succ: succ, fail: fail)
             let key = msg.msgId!
             MsgsMonitor[key] = hander

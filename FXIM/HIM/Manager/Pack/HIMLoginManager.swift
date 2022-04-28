@@ -12,7 +12,7 @@ protocol HIMLoginDelegate:NSObjectProtocol {
     
     func loginFail()
 }
-class HIMLoginManager: HIMBaseManager<Pb_LoginAck> {
+class HIMLoginManager: HIMBaseHandler<Pb_LoginAck> {
     var token:String!
     var userId:String!
     weak var loginDelegate:HIMLoginDelegate?
@@ -56,8 +56,6 @@ var isLogin = false
             FXMain {
                 self.succ?()
             }
-
-            
         case 401:
             isLogin = false
             //踢出登录
