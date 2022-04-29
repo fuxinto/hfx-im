@@ -21,9 +21,7 @@ struct HUIContactsView: View {
 //
 //                }
                 
-                if let data =  HIMMessageGen.createPack(body: nil, type: .heartbeat){
-                                   
-                    HIMSDK.shared.socketManager.push(body: data)}
+              
                
             } label: {
                 Text("发送消息")

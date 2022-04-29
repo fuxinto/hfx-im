@@ -16,10 +16,11 @@ class HIMMessageAckHandler: HIMBaseHandler<Pb_MessageAck> {
     
     override func receive(body:Pb_MessageAck) {
         FXLog("收到消息Ack：\(body.messageID)")
-      try? HIMMessage.update(msgId: body.messageID, date: getData(msgUid: body.messagedUid), msgUid: body.messagedUid)
+        guard let timestamp = getTimestamp(msgUid: body.messagedUid) else { return  }
+        try? HIMMessage.update(msgId: body.messageID, timestamp: timestamp, msgUid: body.messagedUid)
     }
     
-    func getData(msgUid:String) -> Date{
+    func getTimestamp(msgUid:String) -> Int64?{
         var str = msgUid
         str.removeLast(5)
         str = str.replacingOccurrences(of: "-", with: "")
@@ -37,7 +38,7 @@ class HIMMessageAckHandler: HIMBaseHandler<Pb_MessageAck> {
                     strs >>= 2
 //                    let type = strs&0xf
                     strs >>= 16
-                   return Date.init(timeIntervalSince1970: Double(strs/1000))
+                   return Int64(str)
                     
 //                    print("时间戳：",strs)
 //                    print("type：",type)
@@ -45,6 +46,7 @@ class HIMMessageAckHandler: HIMBaseHandler<Pb_MessageAck> {
                 strs <<= 5
             }
         }
-        return Date()
+        FXLog("getData(msgUid:String),error")
+        return nil
     }
 }

@@ -57,7 +57,7 @@ class HIMStocketManager: NSObject{
         heartTimer.schedule(wallDeadline: .now(), repeating: .seconds(10))
         // 设定时间源的触发事件
         heartTimer.setEventHandler(handler: {
-            messageListener.messagePushHandler.pullMsg()
+            self.messageListener.messagePushHandler.pullMsg()
         })
     }
     

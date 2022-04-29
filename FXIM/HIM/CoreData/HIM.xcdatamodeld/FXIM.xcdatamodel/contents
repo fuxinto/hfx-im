@@ -6,15 +6,15 @@
         <attribute name="msgId" attributeType="String"/>
         <attribute name="msgType" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="msgUid" optional="YES" attributeType="String"/>
+        <attribute name="sendId" optional="YES" attributeType="String"/>
         <attribute name="sessionType" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="status" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="targetId" attributeType="String"/>
         <attribute name="timestamp" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="sendUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HIMUser"/>
     </entity>
     <entity name="HIMSession" representedClassName="HIMSession" syncable="YES" codeGenerationType="class">
-        <attribute name="isOfflineMsg" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
-        <attribute name="isPinned" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="offlineMsg" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="pinned" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="sessionId" optional="YES" attributeType="String"/>
         <attribute name="timestamp" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="unreadCount" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
