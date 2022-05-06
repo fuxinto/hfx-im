@@ -32,7 +32,8 @@ class HIMSDK{
     // MARK: - Private Properties
     
     let socketManager = HIMStocketManager()
-    
+    let messageManager = HIMMessageManager()
+    let sessionManager = HIMSessionManager()
     fileprivate init (){
         
     }

@@ -16,7 +16,7 @@ enum HIMFrameType:UInt8{
 
 class HIMMessageListener:NSObject,HIMMessageListenerDelegate {
     fileprivate var receiveData = Data.init()
-    var loginManager : HIMLoginManager!
+    let loginManager = HIMLoginManager()
     let messageManager = HIMMessageManager()
     let messageAckHandler = HIMMessageAckHandler()
     let messagePushHandler = HIMMessagePushHandler()
@@ -34,7 +34,7 @@ class HIMMessageListener:NSObject,HIMMessageListenerDelegate {
         setHandler(type: Pb_PackType.msgAck, handler:messageAckHandler)
         setHandler(type: Pb_PackType.msgReq, handler: messageManager)
         setHandler(type: Pb_PackType.msgPush, handler: messagePushHandler)
-//        setHandler(type: pb, handler: <#T##HIMMessageProtocol#>)
+        setHandler(type: Pb_PackType.sessionPull, handler: sessionHandler)
     }
     
     fileprivate func setHandler(type:Pb_PackType,handler:HIMMessageProtocol){

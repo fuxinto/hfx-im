@@ -8,13 +8,9 @@
 import SwiftUI
 
 
-class HUISessionListViewModel:ObservableObject{
-    @Published
-    var sessions = [HUISession(),HUISession()]
-}
 struct HUISessionView: View {
     @StateObject
-    var sessionListViewModel = HUISessionListViewModel()
+    var sessionListViewModel = HUISessionListVM()
     var body: some View {
         List {
             ForEach(sessionListViewModel.sessions) { session in

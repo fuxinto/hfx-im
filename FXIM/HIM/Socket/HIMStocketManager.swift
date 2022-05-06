@@ -17,7 +17,7 @@ fileprivate struct HIMDNSModel:Codable{
 
 class HIMStocketManager: NSObject{
     //心疼定时器
-    fileprivate var heartTimer : DispatchSourceTimer!
+    fileprivate var heartTimer : FXTimer!
     /// 是否连接
    fileprivate var isConnected = false
     //是否重连
@@ -29,7 +29,11 @@ class HIMStocketManager: NSObject{
     
   fileprivate let messageListener = HIMMessageListener()
 
-    let loginManager = HIMLoginManager()
+    var loginManager:HIMLoginManager{
+        get{
+            messageListener.loginManager
+        }
+    }
     //断开重连
    fileprivate  func startReConnect() {
        if(!isConnected && self.timeInterval<65 && loginManager.isLogin){
@@ -49,14 +53,11 @@ class HIMStocketManager: NSObject{
     override init() {
         super.init()
         loginManager.loginDelegate = self
-        messageListener.loginManager = loginManager
-        messageListener.initMesListener()
+  
         clientSocket = HIMClientSocket.init(stateListener: self, messageListener: messageListener)
         //启动一个定时器执行心跳
-        heartTimer = DispatchSource.makeTimerSource(queue:DispatchQueue.global())
-        heartTimer.schedule(wallDeadline: .now(), repeating: .seconds(10))
-        // 设定时间源的触发事件
-        heartTimer.setEventHandler(handler: {
+        heartTimer = FXTimer.init(timeInterval: DispatchTimeInterval.seconds(10), handler: {
+            FXLog("发送心跳拉取")
             self.messageListener.messagePushHandler.pullMsg()
         })
     }
@@ -124,7 +125,7 @@ extension HIMStocketManager:HIMStateListenerDelegate{
         isConnected = true
         //发送登录消息
         sendLoginMessage()
-      
+        
         FXLog("连接成功")
     }
     
@@ -141,6 +142,8 @@ extension HIMStocketManager:HIMLoginDelegate{
         timeInterval = 3
         isReConnect = true
         startHeartBeat()
+        //拉取会话列表
+        messageListener.sessionHandler.pullSession()
     }
     func loginFail() {
 //        timeInterval = 3

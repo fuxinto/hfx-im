@@ -8,5 +8,9 @@
 import Foundation
 
 extension HIMSession{
-  
+    var showName:String{
+        get{
+            return "测试昵称"
+        }
+    }
 }

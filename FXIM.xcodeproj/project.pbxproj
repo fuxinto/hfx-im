@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D021D7F2823C3AC004DA26B /* FXTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D021D7E2823C3AC004DA26B /* FXTimer.swift */; };
+		5D021D842824D04A004DA26B /* HIMTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D021D832824D04A004DA26B /* HIMTransform.swift */; };
+		5D021D882824F3C8004DA26B /* him.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D021D872824F3C8004DA26B /* him.pb.swift */; };
+		5D021D8A28251066004DA26B /* HIMSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D021D8928251066004DA26B /* HIMSessionManager.swift */; };
+		5D021D8C2825191C004DA26B /* HUISessionListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D021D8B2825191C004DA26B /* HUISessionListVM.swift */; };
 		5D0E9CC427E8698500DCC0FF /* HIMSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CC327E8698500DCC0FF /* HIMSDK.swift */; };
 		5D0E9CC627E86CCB00DCC0FF /* HIMClientSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CC527E86CCB00DCC0FF /* HIMClientSocket.swift */; };
 		5D0E9CC927E86EAA00DCC0FF /* HIMConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CC827E86EAA00DCC0FF /* HIMConfig.swift */; };
@@ -68,7 +73,6 @@
 		5D6AEA4A27ED8A03005889FC /* HIMStocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6AEA4927ED8A03005889FC /* HIMStocketManager.swift */; };
 		5D794952281A60DC0019A5CF /* HIMMessagePushHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D794951281A60DC0019A5CF /* HIMMessagePushHandler.swift */; };
 		5D794954281A883A0019A5CF /* HIMSessionPushHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D794953281A883A0019A5CF /* HIMSessionPushHandler.swift */; };
-		5D794956281AA2200019A5CF /* him.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D794955281AA2200019A5CF /* him.pb.swift */; };
 		5DFD076D27F59DF40007F029 /* FXTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD076C27F59DF40007F029 /* FXTest.swift */; };
 		5DFFE69D27F1C6FD005B9D02 /* HUISessionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFFE69C27F1C6FD005B9D02 /* HUISessionRow.swift */; };
 		5DFFE6A227F29117005B9D02 /* HUIChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFFE6A127F29117005B9D02 /* HUIChatView.swift */; };
@@ -103,6 +107,11 @@
 
 /* Begin PBXFileReference section */
 		5CDBDC21044E9F6A0E37A664 /* Pods_FXIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FXIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D021D7E2823C3AC004DA26B /* FXTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXTimer.swift; sourceTree = "<group>"; };
+		5D021D832824D04A004DA26B /* HIMTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIMTransform.swift; sourceTree = "<group>"; };
+		5D021D872824F3C8004DA26B /* him.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = him.pb.swift; sourceTree = "<group>"; };
+		5D021D8928251066004DA26B /* HIMSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIMSessionManager.swift; sourceTree = "<group>"; };
+		5D021D8B2825191C004DA26B /* HUISessionListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUISessionListVM.swift; sourceTree = "<group>"; };
 		5D0E9CC327E8698500DCC0FF /* HIMSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIMSDK.swift; sourceTree = "<group>"; };
 		5D0E9CC527E86CCB00DCC0FF /* HIMClientSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIMClientSocket.swift; sourceTree = "<group>"; };
 		5D0E9CC827E86EAA00DCC0FF /* HIMConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIMConfig.swift; sourceTree = "<group>"; };
@@ -168,7 +177,6 @@
 		5D6AEA4927ED8A03005889FC /* HIMStocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIMStocketManager.swift; sourceTree = "<group>"; };
 		5D794951281A60DC0019A5CF /* HIMMessagePushHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIMMessagePushHandler.swift; sourceTree = "<group>"; };
 		5D794953281A883A0019A5CF /* HIMSessionPushHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIMSessionPushHandler.swift; sourceTree = "<group>"; };
-		5D794955281AA2200019A5CF /* him.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = him.pb.swift; sourceTree = "<group>"; };
 		5DFD076C27F59DF40007F029 /* FXTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXTest.swift; sourceTree = "<group>"; };
 		5DFFE69C27F1C6FD005B9D02 /* HUISessionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUISessionRow.swift; sourceTree = "<group>"; };
 		5DFFE6A127F29117005B9D02 /* HUIChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUIChatView.swift; sourceTree = "<group>"; };
@@ -228,6 +236,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5D021D822824D036004DA26B /* Transform */ = {
+			isa = PBXGroup;
+			children = (
+				5D021D832824D04A004DA26B /* HIMTransform.swift */,
+			);
+			path = Transform;
+			sourceTree = "<group>";
+		};
 		5D0E9CC727E86EA100DCC0FF /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,9 +257,8 @@
 		5D0E9CCA27E873E500DCC0FF /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				5D6AEA4C27ED8FB1005889FC /* Pack */,
-				5D6AEA4B27ED8FA4005889FC /* Socket */,
 				5D0E9CDB27E87D4300DCC0FF /* HIMMessageManager.swift */,
+				5D021D8928251066004DA26B /* HIMSessionManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -427,6 +442,7 @@
 		5D0EDF0527D096E600E4C22F /* HIM */ = {
 			isa = PBXGroup;
 			children = (
+				5D6AEA4B27ED8FA4005889FC /* Socket */,
 				5D0E9D0027EB001500DCC0FF /* Comm */,
 				5D0E9CCA27E873E500DCC0FF /* Manager */,
 				5D0E9CC727E86EA100DCC0FF /* Config */,
@@ -458,8 +474,9 @@
 		5D0EDF0827D0B4C300E4C22F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5D021D822824D036004DA26B /* Transform */,
 				5DFFE6AA27F2CE32005B9D02 /* HIMMessage.swift */,
-				5D794955281AA2200019A5CF /* him.pb.swift */,
+				5D021D872824F3C8004DA26B /* him.pb.swift */,
 				5DFFE6AC27F2D800005B9D02 /* HIMSession.swift */,
 			);
 			path = Models;
@@ -481,8 +498,10 @@
 		5D6AEA4B27ED8FA4005889FC /* Socket */ = {
 			isa = PBXGroup;
 			children = (
+				5D6AEA4C27ED8FB1005889FC /* Pack */,
 				5D6AEA4927ED8A03005889FC /* HIMStocketManager.swift */,
 				5D0E9CC527E86CCB00DCC0FF /* HIMClientSocket.swift */,
+				5D021D7E2823C3AC004DA26B /* FXTimer.swift */,
 			);
 			path = Socket;
 			sourceTree = "<group>";
@@ -506,6 +525,7 @@
 			children = (
 				5D0E9CFE27EAE84E00DCC0FF /* HUISessionView.swift */,
 				5DFFE69C27F1C6FD005B9D02 /* HUISessionRow.swift */,
+				5D021D8B2825191C004DA26B /* HUISessionListVM.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -731,6 +751,7 @@
 				5D0EDEC927CF1D6D00E4C22F /* HUIMessageView.swift in Sources */,
 				5D0EDE5027CF14CA00E4C22F /* FXServerConfig.swift in Sources */,
 				5D0E9CCE27E8743E00DCC0FF /* HIMMessageListener.swift in Sources */,
+				5D021D7F2823C3AC004DA26B /* FXTimer.swift in Sources */,
 				5D0E9CF527E99C9400DCC0FF /* Colors.swift in Sources */,
 				5D0E9CDE27E87D4300DCC0FF /* HIMMessageManager.swift in Sources */,
 				5D0EDEB227CF150100E4C22F /* FXDecimalNumbereE.swift in Sources */,
@@ -743,6 +764,7 @@
 				5D0EDEA727CF150100E4C22F /* SwiftyFitsize.swift in Sources */,
 				5DFFE6B527F2F429005B9D02 /* ActivityIndicator.swift in Sources */,
 				5D0E9D0227EB001500DCC0FF /* HIMMessageGen.swift in Sources */,
+				5D021D882824F3C8004DA26B /* him.pb.swift in Sources */,
 				5D794952281A60DC0019A5CF /* HIMMessagePushHandler.swift in Sources */,
 				5DFFE6AB27F2CE32005B9D02 /* HIMMessage.swift in Sources */,
 				5D0EDE9C27CF150100E4C22F /* FXStringE.swift in Sources */,
@@ -751,13 +773,14 @@
 				5DFFE6AF27F2DF25005B9D02 /* HUIInputView.swift in Sources */,
 				5D0EDEA327CF150100E4C22F /* FXUserDefaultsE.swift in Sources */,
 				5D0EDDF927CEFB4800E4C22F /* ContentView.swift in Sources */,
+				5D021D842824D04A004DA26B /* HIMTransform.swift in Sources */,
 				5D794954281A883A0019A5CF /* HIMSessionPushHandler.swift in Sources */,
 				5D0E9CD627E87D1100DCC0FF /* HIMBaseHandler.swift in Sources */,
 				5D0E9CC927E86EAA00DCC0FF /* HIMConfig.swift in Sources */,
-				5D794956281AA2200019A5CF /* him.pb.swift in Sources */,
 				5D0EDEB527CF150100E4C22F /* FXDataE.swift in Sources */,
 				5D0EDEC027CF150100E4C22F /* FXLanguageManager.swift in Sources */,
 				5D0EDEB627CF150100E4C22F /* ToastView.swift in Sources */,
+				5D021D8A28251066004DA26B /* HIMSessionManager.swift in Sources */,
 				5DFFE6A227F29117005B9D02 /* HUIChatView.swift in Sources */,
 				5D0E9CFF27EAE84E00DCC0FF /* HUISessionView.swift in Sources */,
 				5D0E9CF327E99B1400DCC0FF /* TabBarItem.swift in Sources */,
@@ -776,6 +799,7 @@
 				5D0E9CDC27E87D4300DCC0FF /* HIMMessageAckHandler.swift in Sources */,
 				5DFFE6A527F2A38A005B9D02 /* NavigationRow.swift in Sources */,
 				5D0EDEAF27CF150100E4C22F /* FXWindowE.swift in Sources */,
+				5D021D8C2825191C004DA26B /* HUISessionListVM.swift in Sources */,
 				5D0E9CD827E87D1B00DCC0FF /* HIMMessageProtocol.swift in Sources */,
 				5D0EDEB427CF150100E4C22F /* FXNamespaceWrapper.swift in Sources */,
 				5DFFE6AD27F2D800005B9D02 /* HIMSession.swift in Sources */,

@@ -45,7 +45,8 @@ var isLogin = false
     }
     
     override func receive(body:Pb_LoginAck) {
-        if isLogin {
+        if isLogin,body.code == 200 {
+            loginDelegate?.loginSucc()
             return
         }
         
@@ -67,7 +68,6 @@ var isLogin = false
             break
         }
         //这三行代码注意执行顺序
-   
         
     }
 

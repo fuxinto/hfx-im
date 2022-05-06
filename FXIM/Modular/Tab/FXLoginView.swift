@@ -40,7 +40,6 @@ struct FXLoginView: View {
             .background(Color.blue)
             .cornerRadius(22)
             Spacer()
-
         }).padding()
     }
 }

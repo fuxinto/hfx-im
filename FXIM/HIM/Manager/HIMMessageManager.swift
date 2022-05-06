@@ -44,7 +44,6 @@ class HIMMessageManager: HIMBaseHandler<Pb_Message> {
         request.fetchLimit = 1
         request.fetchOffset = 0
         request.sortDescriptors = [NSSortDescriptor.init(key: "timestamp", ascending: false)]
-        
         do {
             let msg =  try PersistenceController.shared.privateContext.fetch(request)
             
@@ -61,11 +60,10 @@ class HIMMessageManager: HIMBaseHandler<Pb_Message> {
         msg.content = content
         let user = HIMUser(context: PersistenceController.shared.privateContext)
         user.userId = HIMSDK.shared.socketManager.loginManager.userId
-        msg.sendUser = user
+//        msg.sendUser = user
         msg.targetId = userId
         msg.msgId = UUID().uuidString
-        msg.sessionType = Int16(Pb_SessionType.c2C.rawValue)
-        msg.msgType = Int16(Pb_ElemType.text.rawValue)
+        msg.type = Int16(Pb_ElemType.text.rawValue)
         do {
             try PersistenceController.shared.privateContext.save()
             return msg

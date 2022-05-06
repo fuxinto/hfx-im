@@ -46,12 +46,11 @@ class HUIImageMessage{
     }
 }
 
-struct HUISession:Identifiable,Hashable {
-    let id = UUID().uuidString
-    
+struct HUISessionCellData:Identifiable,Hashable {
+    let id = UUID()
     var time:String! = "昨天"
-    
     var faceUrl:String?
+
    /**  会话草稿箱
     */
    var draftText:String?
@@ -67,7 +66,12 @@ struct HUISession:Identifiable,Hashable {
     *  若当前会话有草稿时，概览内容为：“[草稿]XXXXX”，XXXXX为草稿内容。
     */
    var subTitle:String! = "你好，去钓鱼多久了时间啊链接发上来开附件的大匠科技类是否"
+   var sessionId:String!
 
+    var isPinned = false
+    var isOfflineMsg = false
+    var timestamp:Int64 = 0
+    var unreadCount = 0
 }
 enum HUIMsgDirection {
     case incoming   //消息接收

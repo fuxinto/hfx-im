@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="HIMMessage" representedClassName="HIMMessage" syncable="YES" codeGenerationType="class">
+        <attribute name="cloudCustomData" optional="YES" attributeType="Binary"/>
         <attribute name="content" optional="YES" attributeType="String"/>
-        <attribute name="expansionDic" optional="YES" attributeType="String"/>
+        <attribute name="faceURL" optional="YES" attributeType="String"/>
         <attribute name="msgId" attributeType="String"/>
-        <attribute name="msgType" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="msgUid" optional="YES" attributeType="String"/>
+        <attribute name="nickName" optional="YES" attributeType="String"/>
         <attribute name="sendId" optional="YES" attributeType="String"/>
-        <attribute name="sessionType" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sessionId" optional="YES" attributeType="String"/>
         <attribute name="status" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="targetId" attributeType="String"/>
         <attribute name="timestamp" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="sendUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HIMUser"/>
     </entity>
     <entity name="HIMSession" representedClassName="HIMSession" syncable="YES" codeGenerationType="class">
         <attribute name="offlineMsg" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="pinned" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="sessionId" optional="YES" attributeType="String"/>
         <attribute name="timestamp" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="unreadCount" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="lastMessage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HIMMessage"/>
     </entity>
@@ -26,8 +30,8 @@
         <attribute name="userId" attributeType="String"/>
     </entity>
     <elements>
-        <element name="HIMMessage" positionX="-65.9542236328125" positionY="100.5579223632812" width="128" height="179"/>
-        <element name="HIMSession" positionX="-291.9802856445312" positionY="-41.27993774414062" width="128" height="119"/>
+        <element name="HIMMessage" positionX="-65.9542236328125" positionY="100.5579223632812" width="128" height="224"/>
+        <element name="HIMSession" positionX="-291.9802856445312" positionY="-41.27993774414062" width="128" height="134"/>
         <element name="HIMUser" positionX="304.2874755859375" positionY="6.671142578125" width="128" height="74"/>
     </elements>
 </model>

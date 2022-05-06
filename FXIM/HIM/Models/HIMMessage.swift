@@ -11,22 +11,39 @@ extension HIMMessage{
     func tranPbMsg()throws -> Data{
         var pb = Pb_Message.init()
         pb.content = content!
-        pb.type = Pb_ElemType.init(rawValue: Int(msgType))!
-        pb.messageID = msgId!
-        if let send = sendUser {
-            var user = Pb_UserInfo.init()
-            user.userID = send.userId!
-            pb.sender = user
-        }
+        pb.type = Pb_ElemType.init(rawValue: Int(type))!
+        pb.msgID = msgId!
+        pb.sender = sendId!
+        pb.nickName = nickName!
+        pb.faceURL = faceURL!
+        pb.status = Pb_MessageStatus.init(rawValue: Int(status))!
         pb.targetID = targetId!
-        pb.sessionType = Pb_SessionType.init(rawValue: Int(sessionType))!
+        if let data = cloudCustomData {
+            pb.cloudCustomData = data
+        }
         do {
             return try pb.serializedData()
         } catch let err {
             throw HIMError.protobufError(err: err)
         }
     }
- 
+    
+    static func getLast(sessionId:String) -> HIMMessage? {
+        //建立一个请求
+        let request = HIMMessage.fetchRequest()
+        request.fetchLimit = 1
+        request.fetchOffset = 0
+        request.sortDescriptors = [NSSortDescriptor.init(key: "timestamp", ascending: false)]
+        request.predicate = NSPredicate.init(format: "sessionId = %@", sessionId)
+        do {
+            let msg =  try PersistenceController.shared.privateContext.fetch(request)
+            return msg.first
+        } catch let error {
+            FXLog("getLast(sessionId:String)(),error:\(error.localizedDescription)")
+            return nil
+        }
+
+    }
     
     static func update(msgId:String,timestamp:Int64,msgUid:String)throws {
         let fetchRequest = Self.fetchRequest()
