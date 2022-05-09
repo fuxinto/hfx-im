@@ -26,11 +26,21 @@ protocol HIMSocketDelegate {
     func stopConnect()
 }
 
-
+protocol HIMSDKListener {
+    func onConnecting()
+    func onConnectSuccess()
+    func onConnectFailed()
+    func onKickedOffline()
+    func onUserSigExpired()
+    func onSelfInfoUpdated()
+}
 class HIMSDK{
-    static let shared = HIMSDK()
-    // MARK: - Private Properties
     
+    static let shared = HIMSDK()
+    
+    var listener:HIMSDKListener?
+    // MARK: - Private Properties
+    let loginManager = HIMLoginManager()
     let socketManager = HIMStocketManager()
     let messageManager = HIMMessageManager()
     let sessionManager = HIMSessionManager()

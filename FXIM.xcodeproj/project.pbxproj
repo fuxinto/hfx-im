@@ -12,6 +12,7 @@
 		5D021D882824F3C8004DA26B /* him.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D021D872824F3C8004DA26B /* him.pb.swift */; };
 		5D021D8A28251066004DA26B /* HIMSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D021D8928251066004DA26B /* HIMSessionManager.swift */; };
 		5D021D8C2825191C004DA26B /* HUISessionListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D021D8B2825191C004DA26B /* HUISessionListVM.swift */; };
+		5D021D8E28262237004DA26B /* HIMLoginAckHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D021D8D28262237004DA26B /* HIMLoginAckHandler.swift */; };
 		5D0E9CC427E8698500DCC0FF /* HIMSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CC327E8698500DCC0FF /* HIMSDK.swift */; };
 		5D0E9CC627E86CCB00DCC0FF /* HIMClientSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CC527E86CCB00DCC0FF /* HIMClientSocket.swift */; };
 		5D0E9CC927E86EAA00DCC0FF /* HIMConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E9CC827E86EAA00DCC0FF /* HIMConfig.swift */; };
@@ -112,6 +113,7 @@
 		5D021D872824F3C8004DA26B /* him.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = him.pb.swift; sourceTree = "<group>"; };
 		5D021D8928251066004DA26B /* HIMSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIMSessionManager.swift; sourceTree = "<group>"; };
 		5D021D8B2825191C004DA26B /* HUISessionListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUISessionListVM.swift; sourceTree = "<group>"; };
+		5D021D8D28262237004DA26B /* HIMLoginAckHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIMLoginAckHandler.swift; sourceTree = "<group>"; };
 		5D0E9CC327E8698500DCC0FF /* HIMSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIMSDK.swift; sourceTree = "<group>"; };
 		5D0E9CC527E86CCB00DCC0FF /* HIMClientSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIMClientSocket.swift; sourceTree = "<group>"; };
 		5D0E9CC827E86EAA00DCC0FF /* HIMConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIMConfig.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 		5D0E9CCA27E873E500DCC0FF /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				5D0E9CD327E87D0A00DCC0FF /* HIMLoginManager.swift */,
 				5D0E9CDB27E87D4300DCC0FF /* HIMMessageManager.swift */,
 				5D021D8928251066004DA26B /* HIMSessionManager.swift */,
 			);
@@ -512,7 +515,7 @@
 				5D0E9CD727E87D1B00DCC0FF /* HIMMessageProtocol.swift */,
 				5D0E9CD527E87D1100DCC0FF /* HIMBaseHandler.swift */,
 				5D0E9CD927E87D4300DCC0FF /* HIMMessageAckHandler.swift */,
-				5D0E9CD327E87D0A00DCC0FF /* HIMLoginManager.swift */,
+				5D021D8D28262237004DA26B /* HIMLoginAckHandler.swift */,
 				5D0E9CCD27E8743E00DCC0FF /* HIMMessageListener.swift */,
 				5D794951281A60DC0019A5CF /* HIMMessagePushHandler.swift */,
 				5D794953281A883A0019A5CF /* HIMSessionPushHandler.swift */,
@@ -762,6 +765,7 @@
 				5D0EDE0327CEFB4A00E4C22F /* HIM.xcdatamodeld in Sources */,
 				5D0E9CEB27E9791D00DCC0FF /* FXUIConfig.swift in Sources */,
 				5D0EDEA727CF150100E4C22F /* SwiftyFitsize.swift in Sources */,
+				5D021D8E28262237004DA26B /* HIMLoginAckHandler.swift in Sources */,
 				5DFFE6B527F2F429005B9D02 /* ActivityIndicator.swift in Sources */,
 				5D0E9D0227EB001500DCC0FF /* HIMMessageGen.swift in Sources */,
 				5D021D882824F3C8004DA26B /* him.pb.swift in Sources */,

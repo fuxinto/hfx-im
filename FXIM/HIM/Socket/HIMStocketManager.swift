@@ -29,14 +29,9 @@ class HIMStocketManager: NSObject{
     
   fileprivate let messageListener = HIMMessageListener()
 
-    var loginManager:HIMLoginManager{
-        get{
-            messageListener.loginManager
-        }
-    }
     //断开重连
    fileprivate  func startReConnect() {
-       if(!isConnected && self.timeInterval<65 && loginManager.isLogin){
+       if(!isConnected && self.timeInterval<65 && HIMSDK.shared.loginManager.isLogin){
             //启动一个定时器执行
             // 4.GCD 主线程/子线程
             DispatchQueue.global().asyncAfter(deadline: .now() + timeInterval) {
@@ -52,7 +47,7 @@ class HIMStocketManager: NSObject{
     
     override init() {
         super.init()
-        loginManager.loginDelegate = self
+        messageListener.loginAckHandler.loginDelegate = self
   
         clientSocket = HIMClientSocket.init(stateListener: self, messageListener: messageListener)
         //启动一个定时器执行心跳
@@ -76,7 +71,7 @@ class HIMStocketManager: NSObject{
     }
     // MARK: - Private Selector
     fileprivate func sendLoginMessage(){
-        loginManager.sendLoginMessage()
+        HIMSDK.shared.loginManager.sendLoginMessage()
     }
     fileprivate var dns:HIMDNSModel!{
         didSet{

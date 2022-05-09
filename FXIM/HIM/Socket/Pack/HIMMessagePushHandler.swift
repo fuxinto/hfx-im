@@ -20,6 +20,13 @@ class HIMMessagePushHandler: HIMBaseHandler<Pb_MessagePush> {
         if body.msglist.isEmpty {
             return
         }
+        for m in body.msglist {
+         let  msg = m.tranMsg()
+            let session = HIMSession.getSession(msg: msg)
+            
+        }
+        PersistenceController.shared.saveContext()
+        
     }
     
     //心跳拉取消息

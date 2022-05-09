@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HUISessionListVM:NSObject{
+class HUISessionListVM:NSObject,ObservableObject{
     @Published
     var sessions = [HUISessionCellData()]
     /**
@@ -54,14 +54,18 @@ class HUISessionListVM:NSObject{
             data.title = session.showName
             ary.append(data)
         }
-        sessions = ary
+        sessions = sortDataList(dataList: ary)
         
     }
     override init() {
         super.init()
         HIMSDK.shared.sessionManager.listener = self
     }
-    
+    func sortDataList(dataList:[HUISessionCellData])-> [HUISessionCellData]{
+       return dataList.sorted { data1, data2 in
+            return data1.timestamp < data2.timestamp
+        }
+    }
     func getLastDisplayString(session:HIMSession) -> NSMutableAttributedString {
         return NSMutableAttributedString()
     }

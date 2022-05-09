@@ -8,7 +8,7 @@
 import Foundation
 
 extension HIMMessage{
-    func tranPbMsg()throws -> Data{
+    func tranPbMsg() -> Data?{
         var pb = Pb_Message.init()
         pb.content = content!
         pb.type = Pb_ElemType.init(rawValue: Int(type))!
@@ -24,8 +24,18 @@ extension HIMMessage{
         do {
             return try pb.serializedData()
         } catch let err {
-            throw HIMError.protobufError(err: err)
+            FXLog("tranPbMsg()；error\(err.localizedDescription)")
+            return nil
         }
+    }
+    
+    func tranSession() -> HIMSession{
+        let session = HIMSession(context:PersistenceController.shared.privateContext)
+        session.sessionId = sessionId
+        session.timestamp = timestamp
+        session.type = type
+        session.lastMessage = self
+        return session
     }
     
     static func getLast(sessionId:String) -> HIMMessage? {
@@ -42,7 +52,6 @@ extension HIMMessage{
             FXLog("getLast(sessionId:String)(),error:\(error.localizedDescription)")
             return nil
         }
-
     }
     
     static func update(msgId:String,timestamp:Int64,msgUid:String)throws {

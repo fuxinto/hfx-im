@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HUISessionRow: View {
-    let session : HUISession
+    let session : HUISessionCellData
     var body: some View {
         HStack{
             Image("avatar")
@@ -63,7 +63,7 @@ private extension HUISessionRow {
 
 struct HUISessionRow_Previews: PreviewProvider {
     static var previews: some View {
-        let session = HUISession()
+        let session = HUISessionCellData()
 
         HUISessionRow(session: session)
     }

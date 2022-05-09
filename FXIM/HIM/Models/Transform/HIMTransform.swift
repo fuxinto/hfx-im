@@ -13,6 +13,7 @@ extension Pb_Message{
         msg.timestamp = timestamp
         msg.content = content
         msg.msgUid = msgUid
+        msg.sessionId = sender == HIMSDK.shared.loginManager.userId ? targetID : targetID
         msg.msgId = msgID
         msg.type = Int16(type.rawValue)
         msg.nickName = nickName

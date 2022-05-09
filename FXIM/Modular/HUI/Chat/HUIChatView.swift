@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HUIChatView: View {
     @State
-    var session:HUISession
+    var session:HUISessionCellData
 
     @State
     var text = ""
@@ -32,6 +32,6 @@ struct HUIChatView: View {
 
 struct HUIChatView_Previews: PreviewProvider {
     static var previews: some View {
-        HUIChatView(session: HUISession())
+        HUIChatView(session: HUISessionCellData())
     }
 }

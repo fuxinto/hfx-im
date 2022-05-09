@@ -38,9 +38,15 @@ class HIMSessionPushHandler: HIMBaseHandler<Pb_SessionPush> {
         }
         PersistenceController.shared.saveContext()
         HIMSDK.shared.sessionManager.listener?.onSessionChanged(sessionList: sessionList)
+        //同步完成
+        if body.sessionList.count <= 20 {
+            HIMSDK.shared.sessionManager.listener?.onSyncServerFinish()
+        }
     }
     
     func pullSession() {
+        //开始同步
+        HIMSDK.shared.sessionManager.listener?.onSyncServerStart()
         var timestape:Int64 = 0
         if let t = HIMMessageManager.getLastMsgTimestamp() {
             timestape = t

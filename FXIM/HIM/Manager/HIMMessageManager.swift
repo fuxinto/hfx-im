@@ -58,9 +58,8 @@ class HIMMessageManager: HIMBaseHandler<Pb_Message> {
     func createMessage(content:String,to userId:String) -> HIMMessage? {
         let msg = HIMMessage(context: PersistenceController.shared.privateContext)
         msg.content = content
-        let user = HIMUser(context: PersistenceController.shared.privateContext)
-        user.userId = HIMSDK.shared.socketManager.loginManager.userId
-//        msg.sendUser = user
+        msg.sendId = HIMSDK.shared.loginManager.userId
+        msg.sessionId = userId
         msg.targetId = userId
         msg.msgId = UUID().uuidString
         msg.type = Int16(Pb_ElemType.text.rawValue)
@@ -74,28 +73,27 @@ class HIMMessageManager: HIMBaseHandler<Pb_Message> {
     }
     
     func sendC2CTextMessage(text:String,to userId:String,succ:@escaping HIMSucc,fail:@escaping HIMFail) {
-        do {
-            guard  let msg = createMessage(content: text, to: userId) else { return fail(404,"本地消息创建失败") }
+        guard  let msg = createMessage(content: text, to: userId) else { return fail(404,"本地消息创建失败") }
 
-            let hander = HIMMsgHandler.init(succ: succ, fail: fail)
-            let key = msg.msgId!
-            MsgsMonitor[key] = hander
-            let data = try  msg.tranPbMsg()
-            HIMSDK.shared.socketManager.push(body:data)
-              //异步延时检测是否发送成功
-              DispatchQueue.global().asyncAfter(deadline: .now() + 3) {
-                  guard let msgHandler = self.MsgsMonitor[key] else{
-                      return
-                  }
-                  msgHandler.fail(20003,"消息发送失败")
-              }
-        } catch (let err) {
+        let hander = HIMMsgHandler.init(succ: succ, fail: fail)
+        let key = msg.msgId!
+        MsgsMonitor[key] = hander
+        guard let data =   msg.tranPbMsg() else {
             //init错误
-            fail(4000,err.localizedDescription)
+            fail(4000,"消息初始化失败")
+            return
         }
-      
         
-        //更新会话列表
+        HIMSDK.shared.socketManager.push(body:data)
+          //异步延时检测是否发送成功
+          DispatchQueue.global().asyncAfter(deadline: .now() + 3) {
+              guard let msgHandler = self.MsgsMonitor[key] else{
+                  return
+              }
+              msgHandler.fail(20003,"消息发送失败")
+          }
+      
+         //更新会话列表
 //        FXIMSDK.shared.conversationManager.received(msg: msg)
         //        NotificationCenter.default.post(name: FXIMNotificationMessageListener, object: msg, userInfo: nil)
     }
