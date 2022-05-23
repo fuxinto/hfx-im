@@ -10,8 +10,8 @@ extension HIMSessionListener{
     func onSyncServerStart(){}
     func onSyncServerFinish(){}
     func onSyncServerFailed(){}
-    func onNew(sessionList:[HIMSession]){}
-    func onSessionChanged(sessionList:[HIMSession]){}
+    func onNew(sessionList:[HIMConversation]){}
+    func onSessionChanged(sessionList:[HIMConversation]){}
     func onTotalUnreadMessageCountChanged(totalUnreadCount:UInt64){}
 }
 protocol HIMSessionListener:NSObjectProtocol{
@@ -30,12 +30,12 @@ protocol HIMSessionListener:NSObjectProtocol{
     /**
      * 有新的会话（比如收到一个新同事发来的单聊消息、或者被拉入了一个新的群组中），可以根据会话的 lastMessage -> timestamp 重新对会话列表做排序。
      */
-    func onNew(sessionList:[HIMSession])
+    func onNew(sessionList:[HIMConversation])
     
     /**
      * 某些会话的关键信息发生变化（未读计数发生变化、最后一条消息被更新等等），可以根据会话的 lastMessage -> timestamp 重新对会话列表做排序。
      */
-    func onSessionChanged(sessionList:[HIMSession])
+    func onSessionChanged(sessionList:[HIMConversation])
     /**
      * 会话未读总数变更通知（5.3.425 及以上版本支持）
      * @note
@@ -54,22 +54,22 @@ class HIMSessionManager {
 //    func removeSessionListener(_ listener:HIMSessionListener) {
 //        listeners = listeners.filter { $0 != listener }
 //    }
-    func getSessionList(offset: Int, count: Int,succ:([HIMSession],Int,Bool)-> Void,fail:HIMFail) {
-        let request = HIMSession.fetchRequest()
-        request.fetchOffset = offset
-        request.fetchLimit = count
-        request.sortDescriptors = [NSSortDescriptor.init(key: "timestamp", ascending: false)]
-        do {
-            let list =  try PersistenceController.shared.privateContext.fetch(request)
-           
-            for session in list {
-                session.lastMessage = HIMMessage.getLast(sessionId: session.sessionId!)
-            }
-            succ(list, count+offset, list.count>=count)
-        } catch let error {
-            FXLog("getLastMsgTimestamp(),error:\(error.localizedDescription)")
-            fail(2001, "查询失败")
-        }
-    }
+//    func getSessionList(offset: Int, count: Int,succ:([HIMConversation],Int,Bool)-> Void,fail:HIMFail) {
+//        let request = HIMConversation.fetchRequest()
+//        request.fetchOffset = offset
+//        request.fetchLimit = count
+//        request.sortDescriptors = [NSSortDescriptor.init(key: "timestamp", ascending: false)]
+//        do {
+//            let list =  try PersistenceController.shared.privateContext.fetch(request)
+//
+//            for session in list {
+//                session.lastMessage = HIMMessage.getLast(sessionId: session.sessionId!)
+//            }
+//            succ(list, count+offset, list.count>=count)
+//        } catch let error {
+//            FXLog("getLastMsgTimestamp(),error:\(error.localizedDescription)")
+//            fail(2001, "查询失败")
+//        }
+//    }
     
 }

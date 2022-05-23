@@ -19,4 +19,6 @@ target 'FXIM' do
   pod 'SwiftProtobuf'
   #socket
   pod 'CocoaAsyncSocket'
+  #数据库
+  pod 'WCDB.swift'
 end

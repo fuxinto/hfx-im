@@ -15,9 +15,9 @@ class HIMMessageAckHandler: HIMBaseHandler<Pb_MessageAck> {
     }
     
     override func receive(body:Pb_MessageAck) {
-        FXLog("收到消息Ack：\(body.messageID)")
-        guard let timestamp = getTimestamp(msgUid: body.messagedUid) else { return  }
-        try? HIMMessage.update(msgId: body.messageID, timestamp: timestamp, msgUid: body.messagedUid)
+        FXLog("收到消息Ack：\(body.msgID)")
+//        guard let timestamp = getTimestamp(msgUid: body.msgUid) else { return  }
+//        try? HIMMessage.update(msgId: body.messageID, timestamp: timestamp, msgUid: body.messagedUid)
     }
     
     func getTimestamp(msgUid:String) -> Int64?{

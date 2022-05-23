@@ -13,7 +13,6 @@ struct HUIMessageView: View {
         Text("1")
         
     }
-    
 }
 
 struct HUIMessageView_Previews: PreviewProvider {

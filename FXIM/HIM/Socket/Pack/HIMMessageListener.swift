@@ -19,8 +19,8 @@ class HIMMessageListener:NSObject,HIMMessageListenerDelegate {
     let loginAckHandler = HIMLoginAckHandler()
     let messageManager = HIMMessageManager()
     let messageAckHandler = HIMMessageAckHandler()
-    let messagePushHandler = HIMMessagePushHandler()
-    let sessionHandler = HIMSessionPushHandler()
+    let messagePushHandler = HIMMessagePullAckHandler()
+//    let sessionHandler = HIMSessionPushHandler()
     var handlerDict = Dictionary<Pb_PackType,HIMMessageProtocol>()
 //   var messageTypeDict = [Int16:FXIMPbSerializedProtocol.Type]()
     
@@ -33,8 +33,8 @@ class HIMMessageListener:NSObject,HIMMessageListenerDelegate {
         setHandler(type: Pb_PackType.loginAck, handler: loginAckHandler)
         setHandler(type: Pb_PackType.msgAck, handler:messageAckHandler)
         setHandler(type: Pb_PackType.msgReq, handler: messageManager)
-        setHandler(type: Pb_PackType.msgPush, handler: messagePushHandler)
-        setHandler(type: Pb_PackType.sessionPull, handler: sessionHandler)
+        setHandler(type: Pb_PackType.msgPullAck, handler: messagePushHandler)
+//        setHandler(type: Pb_PackType.sessionPull, handler: sessionHandler)
     }
     
     fileprivate func setHandler(type:Pb_PackType,handler:HIMMessageProtocol){

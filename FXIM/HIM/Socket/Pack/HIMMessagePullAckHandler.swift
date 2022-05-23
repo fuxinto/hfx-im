@@ -9,37 +9,37 @@ import Foundation
 
 
 
-class HIMMessagePushHandler: HIMBaseHandler<Pb_MessagePush> {
+class HIMMessagePullAckHandler: HIMBaseHandler<Pb_MessagePullAck> {
     
-    override func bodyClass() -> Pb_MessagePush.Type {
-        return Pb_MessagePush.self
+    override func bodyClass() -> Pb_MessagePullAck.Type {
+        return Pb_MessagePullAck.self
     }
     
-    override func receive(body:Pb_MessagePush) {
+    override func receive(body:Pb_MessagePullAck) {
         FXLog("收到push消息\(body.msglist.count)条")
         if body.msglist.isEmpty {
             return
         }
+        var conversationIds = [String]()
+
         for m in body.msglist {
          let  msg = m.tranMsg()
-            let session = HIMSession.getSession(msg: msg)
             
+            if !conversationIds.contains(msg.conversationId) {
+                conversationIds.append(msg.conversationId)
+            }
         }
-        PersistenceController.shared.saveContext()
-        
     }
     
     //心跳拉取消息
     func pullMsg() {
         var timestamp:Int64 = 0
-        
         if let t = HIMMessageManager.getLastMsgTimestamp(){
             timestamp = t
         }
-        var pull = Pb_MessagePull()
+        var pull = Pb_MessagePullReq()
         pull.timestamp = timestamp
-        pull.ascending = true
-        if let heartbeatBody = HIMMessageGen.createPack(body: pull, type: .msgPull) {
+        if let heartbeatBody = HIMMessageGen.createPack(body: pull, type: .msgPullReq) {
             HIMSDK.shared.socketManager.push(body: heartbeatBody)
         }
     }

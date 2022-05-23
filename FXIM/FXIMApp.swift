@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct FXIMApp: App {
-    let persistenceController = PersistenceController.shared
+//    let persistenceController = PersistenceController.shared
     @ObservedObject var app = FXIMAppManager.share
     var body: some Scene {
         WindowGroup {

@@ -39,44 +39,26 @@ class HIMMessageManager: HIMBaseHandler<Pb_Message> {
     var MsgsMonitor = [String:HIMMsgHandler]()
     
     static func getLastMsgTimestamp() -> Int64? {
-        //建立一个请求
-        let request = HIMMessage.fetchRequest()
-        request.fetchLimit = 1
-        request.fetchOffset = 0
-        request.sortDescriptors = [NSSortDescriptor.init(key: "timestamp", ascending: false)]
-        do {
-            let msg =  try PersistenceController.shared.privateContext.fetch(request)
-            
-            return msg.first?.timestamp
-        } catch let error {
-            FXLog("getLastMsgTimestamp(),error:\(error.localizedDescription)")
-            return nil
-        }
+        return 0
     }
     
     
     func createMessage(content:String,to userId:String) -> HIMMessage? {
-        let msg = HIMMessage(context: PersistenceController.shared.privateContext)
+        let msg = HIMMessage()
         msg.content = content
-        msg.sendId = HIMSDK.shared.loginManager.userId
-        msg.sessionId = userId
+        msg.senderId = HIMSDK.shared.loginManager.userId
+        msg.conversationId = userId
         msg.targetId = userId
         msg.msgId = UUID().uuidString
-        msg.type = Int16(Pb_ElemType.text.rawValue)
-        do {
-            try PersistenceController.shared.privateContext.save()
-            return msg
-        } catch (let err) {
-            FXLog("创建消息失败:"+err.localizedDescription)
-            return nil
-        }
+        msg.type = Int32(Pb_ElemType.text.rawValue)
+       return msg
     }
     
     func sendC2CTextMessage(text:String,to userId:String,succ:@escaping HIMSucc,fail:@escaping HIMFail) {
         guard  let msg = createMessage(content: text, to: userId) else { return fail(404,"本地消息创建失败") }
 
         let hander = HIMMsgHandler.init(succ: succ, fail: fail)
-        let key = msg.msgId!
+        let key = msg.msgId
         MsgsMonitor[key] = hander
         guard let data =   msg.tranPbMsg() else {
             //init错误

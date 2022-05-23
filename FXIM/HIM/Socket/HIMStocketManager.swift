@@ -13,6 +13,7 @@ fileprivate struct HIMGateModel:Codable{
 }
 fileprivate struct HIMDNSModel:Codable{
     let dns:[HIMGateModel]
+    
 }
 
 class HIMStocketManager: NSObject{
@@ -138,7 +139,7 @@ extension HIMStocketManager:HIMLoginDelegate{
         isReConnect = true
         startHeartBeat()
         //拉取会话列表
-        messageListener.sessionHandler.pullSession()
+//        messageListener.sessionHandler.pullSession()
     }
     func loginFail() {
 //        timeInterval = 3

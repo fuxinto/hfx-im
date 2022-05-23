@@ -17,8 +17,6 @@ protocol HIMMessageListenerDelegate:NSObjectProtocol {
     func receive(data:Data)
 }
 protocol HIMSocketDelegate {
-
-    
     func write(data:Data)
     /// 开始连接
     /// - Parameter addr: socket host:port
@@ -34,6 +32,7 @@ protocol HIMSDKListener {
     func onUserSigExpired()
     func onSelfInfoUpdated()
 }
+
 class HIMSDK{
     
     static let shared = HIMSDK()

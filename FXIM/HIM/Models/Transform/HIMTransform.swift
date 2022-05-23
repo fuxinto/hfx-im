@@ -9,17 +9,17 @@ import Foundation
 
 extension Pb_Message{
     func tranMsg() -> HIMMessage {
-        let msg = HIMMessage(context: PersistenceController.shared.privateContext)
+        let msg = HIMMessage()
         msg.timestamp = timestamp
         msg.content = content
         msg.msgUid = msgUid
-        msg.sessionId = sender == HIMSDK.shared.loginManager.userId ? targetID : targetID
+        msg.conversationId = targetID
         msg.msgId = msgID
-        msg.type = Int16(type.rawValue)
+        msg.type = Int32(type.rawValue)
         msg.nickName = nickName
-        msg.faceURL = faceURL
-        msg.status = Int16(status.rawValue)
-        msg.sendId = sender
+        msg.faceUrl = faceURL
+        msg.status = Int32(status.rawValue)
+        msg.senderId = senderID
         msg.targetId = targetID
         msg.cloudCustomData = cloudCustomData
         return msg

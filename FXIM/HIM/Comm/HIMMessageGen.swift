@@ -12,7 +12,7 @@ class HIMMessageGen {
     /*创建ack*/
     class func createAck(msgId:String) throws -> Data?{
         var chatMsgResp = Pb_MessageAck.init()
-        chatMsgResp.messagedUid = msgId
+        chatMsgResp.msgUid = msgId
        return  createPack(body:chatMsgResp , type: Pb_PackType.msgAck)
     }
     //创建登录消息

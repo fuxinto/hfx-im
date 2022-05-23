@@ -10,6 +10,8 @@ PODS:
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
   - PLCrashReporter (1.10.1)
+  - SQLiteRepairKit (1.2.2):
+    - WCDBOptimizedSQLCipher (~> 1.2.0)
   - SWCompression (4.8.0):
     - BitByteData (~> 2.0)
     - SWCompression/BZip2 (= 4.8.0)
@@ -55,6 +57,10 @@ PODS:
   - SwiftyRSA (1.7.0):
     - SwiftyRSA/ObjC (= 1.7.0)
   - SwiftyRSA/ObjC (1.7.0)
+  - WCDB.swift (1.0.8.2):
+    - SQLiteRepairKit (~> 1.2.0)
+    - WCDBOptimizedSQLCipher (~> 1.2.0)
+  - WCDBOptimizedSQLCipher (1.2.1)
 
 DEPENDENCIES:
   - CocoaAsyncSocket
@@ -66,6 +72,7 @@ DEPENDENCIES:
   - SWCompression
   - SwiftProtobuf
   - SwiftyRSA
+  - WCDB.swift
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
@@ -77,9 +84,12 @@ SPEC REPOS:
     - Kingfisher
     - Moya
     - PLCrashReporter
+    - SQLiteRepairKit
     - SWCompression
     - SwiftProtobuf
     - SwiftyRSA
+    - WCDB.swift
+    - WCDBOptimizedSQLCipher
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
@@ -90,10 +100,13 @@ SPEC CHECKSUMS:
   Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   PLCrashReporter: b30195e509f07299ea277d1997b3a39449d05698
+  SQLiteRepairKit: 35aaae5a8838adb85f5b1eb4d796055be6060a4b
   SWCompression: a01104ffcd91ace10421def49d11fdfc3b82a86c
   SwiftProtobuf: 6ef3f0e422ef90d6605ca20b21a94f6c1324d6b3
   SwiftyRSA: 8c6dd1ea7db1b8dc4fb517a202f88bb1354bc2c6
+  WCDB.swift: 05d509d7a0e60fb6e11c34eb7e4027c0fab5849f
+  WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
 
-PODFILE CHECKSUM: 6bc08675db013f6d7d14a79756682d97bab6afd7
+PODFILE CHECKSUM: 964efa91d75de874ab0b8a36f76cb3713198f428
 
 COCOAPODS: 1.11.2

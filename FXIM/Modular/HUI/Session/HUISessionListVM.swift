@@ -16,27 +16,27 @@ class HUISessionListVM:NSObject,ObservableObject{
     var pagePullCount:Int = 100
     var nextSeq:Int = 0
     var isFinished = false
-    var localSessionList = [HIMSession]()
+    var localSessionList = [HIMConversation]()
     
     func loadSession() {
         if isFinished {
             return
         }
-        HIMSDK.shared.sessionManager.getSessionList(offset: nextSeq, count: pagePullCount) { list, offet, isFinished in
-            self.nextSeq = offet
-            self.isFinished = isFinished
-            
-        } fail: { code, msg in
-            
-        }
+//        HIMSDK.shared.sessionManager.getSessionList(offset: nextSeq, count: pagePullCount) { list, offet, isFinished in
+//            self.nextSeq = offet
+//            self.isFinished = isFinished
+//            
+//        } fail: { code, msg in
+//            
+//        }
 
     }
     
-    func update(sessionList:[HIMSession]) {
+    func update(sessionList:[HIMConversation]) {
         // 更新 UI 会话列表，如果 UI 会话列表有新增的会话，就替换，如果没有，就新增
         for session in sessionList {
             if let index = localSessionList.firstIndex(where: { localSession in
-                return localSession.sessionId == session.sessionId
+                return localSession.conversationId == session.conversationId
             }) {
                 localSessionList.remove(at: index)
             }
@@ -46,12 +46,12 @@ class HUISessionListVM:NSObject,ObservableObject{
         var ary = [HUISessionCellData]()
         for session in localSessionList {
             var data = HUISessionCellData()
-            data.sessionId = session.sessionId
+            data.sessionId = session.conversationId
             data.unreadCount = Int(session.unreadCount)
             if let msg = session.lastMessage {
                 data.timestamp = msg.timestamp
             }
-            data.title = session.showName
+//            data.title = session.showName
             ary.append(data)
         }
         sessions = sortDataList(dataList: ary)
@@ -66,7 +66,7 @@ class HUISessionListVM:NSObject,ObservableObject{
             return data1.timestamp < data2.timestamp
         }
     }
-    func getLastDisplayString(session:HIMSession) -> NSMutableAttributedString {
+    func getLastDisplayString(session:HIMConversation) -> NSMutableAttributedString {
         return NSMutableAttributedString()
     }
 }

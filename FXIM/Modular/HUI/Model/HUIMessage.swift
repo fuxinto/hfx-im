@@ -93,7 +93,6 @@ struct HUIMessage:Identifiable{
     var textMessage:HUITextMessage?
     var elemType:Pb_ElemType!
     var imageMessage:HUIImageMessage?
-    
     //消息方向
     var direction:HUIMsgDirection!
     
